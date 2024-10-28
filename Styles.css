@@ -1,0 +1,96 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #081fa3; /* Світлий фон */
+}
+header {
+    padding: 20px;
+    display: flex;
+    background-color: #06caec; /* Глибокий червоний заголовок */
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #c4bbac; /* Контрастний нижній край */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Легке тіньове відображення */
+}
+.header-text {
+    max-width: 80%;
+    color: #FFFFFF; /* Білий текст для заголовку */
+    font-size: 1.6em; /* Збільшений шрифт для заголовку */
+}
+.student-photo {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+    margin-left: 20px;
+    border-radius: 15px; /* Округлені кути */
+    border: 4px solid #fffefc; /* Контур з кольору */
+}
+nav {
+    background-color: #98f144; /* Темний коричневий фон для навігації */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 4px solid #459211; /* Верхній край навігації */
+}
+nav button {
+    background-color: #13632d; /* Яскравий червоний фон для кнопок */
+    color: #FFFFFF; /* Білий текст */
+    border: none;
+    padding: 12px 18px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 25px; /* Велике округлення */
+    transition: background-color 0.3s, transform 0.2s; /* Анімація при наведені */
+}
+nav button:hover {
+    background-color: #09ff8c; /* Зміна кольору при наведені */
+    transform: scale(1.05); /* Збільшення кнопки при наведені */
+}
+main {
+    display: flex;
+    padding: 20px;
+}
+.screen-img {
+   max-width: 60%;
+   height: auto;
+   display: block;
+   margin: 0 auto;
+   border: 4px solid #68af25; /* Контур з кольору */
+   border-radius: 15px; /* Округлені кути */
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Тіньове відображення */
+}
+.sidebar {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.sidebar button {
+    background-color: #012ceb; /* Темний фон для кнопок бічної панелі */
+    color: #FFFFFF; /* Білий текст */
+    border: none;
+    padding: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 25px; /* Велике округлення */
+    transition: background-color 0.3s, transform 0.2s; /* Анімація при наведені */
+}
+.sidebar button:hover {
+    background-color: #0ac8f8; /* Зміна кольору при наведені */
+    transform: scale(1.05); /* Збільшення кнопки при наведені */
+}
+.content {
+    flex-grow: 1;
+    background-color: #ffffff; /* Світліший фон для контенту */
+    padding: 20px;
+    border-radius: 15px; /* Округлені кути */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Тіньове відображення */
+}
+.content-section {
+    display: none;
+}
+.content-section.active {
+    display: block;
+}
