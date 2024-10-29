@@ -35,113 +35,67 @@
             <button onclick="showSection('goal')">Тема, мета, місце розташування лаби 1</button>
             <button onclick="showSection('structure')">Cтруктура документа</button>
             <button onclick="showSection('tables')">HTML-код таблиць</button>
-            <button onclick="showSection('forms')">HTML-код списки</button>
+            <button onclick="showSection('lists')">HTML-код списки</button>
             <button onclick="showSection('images')">HTML-код зображення</button>
             <button onclick="showSection('conclusion')">Висновки</button>
         </div>
-<!-- Контент для кожної лабораторної роботи -->
+        <!-- Контент для кожної лабораторної роботи -->
         <div class="content">
             <!-- Лабораторна робота 1 -->
             <div id="lab1" class="content-section">
                 <div id="description">
-<h4>Опис предметного середовища</h4>
-<p>
-    <strong>Тема:</strong> Створення веб-сайту магазину для книгарні "BookMarket"<br />
-
-
-
-
-    <strong>Мета проєкту:</strong> 
-    Створити зручну та привабливу онлайн-платформу для купівлі книг,
-    що пропонує широкий асортимент літератури для різних вікових груп та жанрів. 
-   Сайт має забезпечувати користувачам можливість легко знаходити потрібні книги, ознайомлюватись з відгуками, отримувати рекомендації на основі їх інтересів, а також надавати зручні способи оплати та доставки.
-    Основною метою є підвищення продажів та формування лояльності до бренду.
-</p>
-           </div>
-                <div id="goal">
-                    <p><strong>Тема:</strong>Структура HTML-документа. Вибір предметної галузі.
-                    робота з посиланнями, таблицями, зображеннями, списками в html-документі.</p><br/>
-                    <p><strong>Мета:</strong>придбати практичні навички роботи з HTML-документом, таблицями, , зображеннями, посиланнями, списками, формами
-                    Створити шаблон звітного HTML-документом для відображення результатів роботи всіх лабораторних робіт.
+                    <h4>Опис предметного середовища</h4>
+                    <p>
+                        <strong>Тема:</strong> Створення веб-сайту магазину для книгарні "BookMarket"<br />
+                        <strong>Мета проєкту:</strong> 
+                        Створити зручну та привабливу онлайн-платформу для купівлі книг, що пропонує широкий асортимент літератури для різних вікових груп та жанрів. 
+                        Сайт має забезпечувати користувачам можливість легко знаходити потрібні книги, ознайомлюватись з відгуками, отримувати рекомендації на основі їх інтересів, а також надавати зручні способи оплати та доставки.
+                        Основною метою є підвищення продажів та формування лояльності до бренду.
                     </p>
+                </div>
+                <div id="goal">
+                    <p><strong>Тема:</strong> Структура HTML-документа. Вибір предметної галузі, робота з посиланнями, таблицями, зображеннями, списками в html-документі.</p>
+                    <br/>
+                    <p><strong>Мета:</strong> Придбати практичні навички роботи з HTML-документом, таблицями, зображеннями, посиланнями, списками, формами. Створити шаблон звітного HTML-документа для відображення результатів роботи всіх лабораторних робіт.</p>
                     <a href="http://127.0.0.1:5500/index.html#">Посилання на веб-сторінку</a>
                 </div>
                 <div id="structure">
                     <h4>СТРУКТУРА ДОКУМЕНТА</h4>
-                    
-                    <!DOCTYPE html>
-<html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <main>
-        <h2>HTML-код</h2>
-        <pre>
-            &lt;!DOCTYPE html&gt;
-            &lt;html lang="uk"&gt;
-            &lt;head&gt;
-                &lt;meta charset="UTF-8"&gt;
-                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                &lt;title&gt;BookMart - Магазин Книг&lt;/title&gt;
-            &lt;/head&gt;
-            &lt;body&gt;
-                &lt;!-- Основний контент --&gt;
-                &lt;main&gt;
-                    &lt;h2&gt;Зображення&lt;/h2&gt;
-
-                    &lt;!-- Перша книга --&gt;
-                    &lt;div&gt;
-                        &lt;img src="Book1.jpg" alt="Назва книги 1" width="200"&gt;
-                        &lt;h3&gt;Відьмак 4&lt;/h3&gt;
-                        &lt;p&gt;&lt;strong&gt;Автор:&lt;/strong&gt; Артем Мейсон&lt;/p&gt;
-                        &lt;p&gt;&lt;strong&gt;Ціна:&lt;/strong&gt; 450 грн&lt;/p&gt;
-
-                        &lt;p&gt;&lt;strong&gt;Жанри:&lt;/strong&gt;&lt;/p&gt;
-                        &lt;ul&gt;
-                            &lt;li&gt;Фентезі&lt;/li&gt;
-                            &lt;li&gt;Пригоди&lt;/li&gt;
-                            &lt;li&gt;Епопея&lt;/li&gt;
-                        &lt;/ul&gt;
-
-                        &lt;p&gt;&lt;strong&gt;Формати:&lt;/strong&gt;&lt;/p&gt;
-                        &lt;ol&gt;
-                            &lt;li&gt;Тверда обкладинка&lt;/li&gt;
-                            &lt;li&gt;М'яка обкладинка&lt;/li&gt;
-                            &lt;li&gt;Електронний формат&lt;/li&gt;
-                        &lt;/ol&gt;
-                    &lt;/div&gt;
-
-                    &lt;hr&gt; &lt;!-- Розділювач між книгами --&gt;
-
-                    &lt;!-- Друга книга --&gt;
-                    &lt;div&gt;
-                        &lt;img src="Book2.jpg" alt="Назва книги 2" width="200"&gt;
-                        &lt;h3&gt;Кунг-фу Панда 5&lt;/h3&gt;
-                        &lt;p&gt;&lt;strong&gt;Автор:&lt;/strong&gt; Євсєєв Денис&lt;/p&gt;
-                        &lt;p&gt;&lt;strong&gt;Ціна:&lt;/strong&gt; 600 грн&lt;/p&gt;
-
-                        &lt;p&gt;&lt;strong&gt;Жанри:&lt;/strong&gt;&lt;/p&gt;
-                        &lt;ul&gt;
-                            &lt;li&gt;Бойові мистецтва&lt;/li&gt;
-                            &lt;li&gt;Пригоди&lt;/li&gt;
-                            &lt;li&gt;Фентезі&lt;/li&gt;
-                        &lt;/ul&gt;
-
-                        &lt;p&gt;&lt;strong&gt;Формати:&lt;/strong&gt;&lt;/p&gt;
-                        &lt;ol&gt;
-                            &lt;li&gt;Тверда обкладинка&lt;/li&gt;
-                            &lt;li&gt;М'яка обкладинка&lt;/li&gt;
-                            &lt;li&gt;Аудіокнига&lt;/li&gt;
-                        &lt;/ol&gt;
-                    &lt;/div&gt;
-
-                    &lt;hr&gt; &lt;!-- Розділювач між книгами --&gt;
-
-                    &lt;!-- Додаткова таблиця з можливими книгами --&gt;
-                    &lt;h2&gt;Таблиця&lt;/h2&gt;
-
+                    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="uk"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        &lt;title&gt;BookMart - Магазин Книг&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;main&gt;
+                            &lt;h2&gt;Зображення&lt;/h2&gt;
+                            &lt;div&gt;
+                                &lt;img src="Book1.jpg" alt="Назва книги 1" width="200"&gt;
+                                &lt;h3&gt;Відьмак 4&lt;/h3&gt;
+                                &lt;p&gt;&lt;strong&gt;Автор:&lt;/strong&gt; Артем Мейсон&lt;/p&gt;
+                                &lt;p&gt;&lt;strong&gt;Ціна:&lt;/strong&gt; 450 грн&lt;/p&gt;
+                                &lt;ul&gt;
+                                    &lt;li&gt;Фентезі&lt;/li&gt;
+                                    &lt;li&gt;Пригоди&lt;/li&gt;
+                                    &lt;li&gt;Епопея&lt;/li&gt;
+                                &lt;/ul&gt;
+                                &lt;ol&gt;
+                                    &lt;li&gt;Тверда обкладинка&lt;/li&gt;
+                                    &lt;li&gt;М'яка обкладинка&lt;/li&gt;
+                                    &lt;li&gt;Електронний формат&lt;/li&gt;
+                                &lt;/ol&gt;
+                            &lt;/div&gt;
+                        &lt;/main&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    </pre>
+                </div>
+                <div id="tables" class="content-section">
+                    <h4>HTML-код таблиці</h4>
+                    <pre>
                     &lt;table border="1" cellpadding="10" cellspacing="0"&gt;
                         &lt;thead&gt;
                             &lt;tr&gt;
@@ -158,168 +112,54 @@
                                 &lt;td&gt;Фентезі&lt;/td&gt;
                                 &lt;td&gt;500 грн&lt;/td&gt;
                             &lt;/tr&gt;
-                            &lt;tr&gt;
-                                &lt;td&gt;Гаррі Поттер і філософський камінь&lt;/td&gt;
-                                &lt;td&gt;Джоан Роулінг&lt;/td&gt;
-                                &lt;td&gt;Фентезі, Пригоди&lt;/td&gt;
-                                &lt;td&gt;400 грн&lt;/td&gt;
-                            &lt;/tr&gt;
-                            &lt;tr&gt;
-                                &lt;td&gt;Мистецтво війни&lt;/td&gt;
-                                &lt;td&gt;Сунь-цзи&lt;/td&gt;
-                                &lt;td&gt;Саморозвиток, Історія&lt;/td&gt;
-                                &lt;td&gt;300 грн&lt;/td&gt;
-                            &lt;/tr&gt;
                         &lt;/tbody&gt;
                     &lt;/table&gt;
-
-                    &lt;!-- Форма  --&gt;
-                    &lt;h2&gt;Форма&lt;/h2&gt;
-                    &lt;form action="feedback.php" method="post"&gt;
-                        &lt;label for="name"&gt;Ім'я:&lt;/label&gt;&lt;br&gt;
-                        &lt;input type="text" id="name" name="name" required&gt;&lt;br&gt;&lt;br&gt;
-
-                        &lt;label for="email"&gt;Email:&lt;/label&gt;&lt;br&gt;
-                        &lt;input type="email" id="email" name="email" required&gt;&lt;br&gt;&lt;br&gt;
-
-                        &lt;label for="message"&gt;Повідомлення:&lt;/label&gt;&lt;br&gt;
-                        &lt;textarea id="message" name="message" rows="4" required&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
-
-                        &lt;button type="submit"&gt;Надіслати&lt;/button&gt;
-                    &lt;/form&gt;
-
-                    &lt;!-- Посилання на сторінку з описом предметної галузі та бізнес-логіки --&gt;
-                    &lt;h2&gt;Інформація про бізнес-логіку&lt;/h2&gt;
-                    &lt;p&gt;Для детальної інформації перейдіть на сторінку &lt;a href="Link.html"&gt;Опис предметної галузі та бізнес-логіки&lt;/a&gt;.&lt;/p&gt;
-                &lt;/main&gt;
-
-                &lt;!-- Нижній колонтитул --&gt;
-                &lt;footer&gt;
-                    &lt;p&gt;&amp;copy; 2023 BookMart. Всі права захищені.&lt;/p&gt;
-                &lt;/footer&gt;
-            &lt;/body&gt;
-            &lt;/html&gt;
-        </pre>
-    </main>
-</body>
-</html>
-
-                </div>
-                <!-- Інші секції... -->
-                <div id="tables" class="content-section">
-                    <h4>HTML-код таблиці</h4>
-                    <pre><code>
-                        &lt;table border="1" cellpadding="10" cellspacing="0"&gt;
-        &lt;thead&gt;
-            &lt;tr&gt;
-                &lt;th&gt;Назва книги&lt;/th&gt;
-                &lt;th&gt;Автор&lt;/th&gt;
-                &lt;th&gt;Жанр&lt;/th&gt;
-                &lt;th&gt;Ціна&lt;/th&gt;
-            &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
-            &lt;tr&gt;
-                &lt;td&gt;Хроніки Нарнії&lt;/td&gt;
-                &lt;td&gt;Клайв Льюїс&lt;/td&gt;
-                &lt;td&gt;Фентезі&lt;/td&gt;
-                &lt;td&gt;500 грн&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;Гаррі Поттер і філософський камінь&lt;/td&gt;
-                &lt;td&gt;Джоан Роулінг&lt;/td&gt;
-                &lt;td&gt;Фентезі, Пригоди&lt;/td&gt;
-                &lt;td&gt;400 грн&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;Мистецтво війни&lt;/td&gt;
-                &lt;td&gt;Сунь-цзи&lt;/td&gt;
-                &lt;td&gt;Саморозвиток, Історія&lt;/td&gt;
-                &lt;td&gt;300 грн&lt;/td&gt;
-            &lt;/tr&gt;
-        &lt;/tbody&gt;
-    &lt;/table&gt;
-</pre> 
-         
-            <h4>Скріншот таблиці</h4>
+                    </pre>
                     <img src="Photo2.jpg" alt="Скріншот таблиці" width="600">
-                
-                    <h4>Теорія про теги та атрибути, що застосовуються при створенні таблиць</h4>
-                    <p>Таблиці в HTML використовуються для організації даних у рядках і стовпцях. Основні теги для створення таблиць:</p>
-                    <ul>
-                        <li><strong>&lt;table&gt;</strong>: Цей тег визначає саму таблицю.</li>
-                        <li><strong>&lt;tr&gt;</strong>: Тег рядка таблиці. Використовується для створення нових рядків.</li>
-                        <li><strong>&lt;th&gt;</strong>: Тег заголовка стовпця. Використовується для створення заголовків у таблиці. Заголовки за замовчуванням жирні і вирівняні по центру.</li>
-                        <li><strong>&lt;td&gt;</strong>: Тег комірки таблиці. Використовується для заповнення даними комірок таблиці.</li>
-                        <li><strong>Атрибути:</strong>
-                            <ul>
-                                <li><strong>colspan</strong>: Визначає кількість стовпців, які повинні бути об'єднані в одній комірці.</li>
-                                <li><strong>rowspan</strong>: Визначає кількість рядків, які повинні бути об'єднані в одній комірці.</li>
-                                <li><strong>border</strong>: Визначає товщину рамки таблиці.</li>
-                                <li><strong>cellpadding</strong>: Визначає внутрішній відступ у комірках таблиці.</li>
-                                <li><strong>cellspacing</strong>: Визначає відстань між комірками таблиці.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <p>Приклад створення таблиці з об'єднанням комірок:</p>
-                    <pre><code>
-                &lt;table border="1"&gt;
-                    &lt;tr&gt;
-                        &lt;th colspan="2"&gt;Тип номера&lt;/th&gt;
-                    &lt;/tr&gt;
-                    &lt;tr&gt;
-                        &lt;td rowspan="2"&gt;Стандартний номер&lt;/td&gt;
-                        &lt;td&gt;1500 грн&lt;/td&gt;
-                    &lt;/tr&gt;
-                    &lt;tr&gt;
-                        &lt;td&gt;Комфортний стандартний номер&lt;/td&gt;
-                    &lt;/tr&gt;
-                &lt;/table&gt;
-                    </code></pre>
+                </div>
+                <div id="lists" class="content-section">
+                    <h4 id="lists">HTML-код списки</h4>
+                    <p><strong>Жанри:</strong></p>
+                    <ol>
+                        <li>фентезі</li>
+                        <li>Пригоди</li>
+                        <li>Епопея</li>
+                    </ol>
+                    <p><strong>Формати:</strong></p>
+                    <ol>
+                        <li>Тверда обкладинка</li>
+                        <li>М'яка обкладинка</li>
+                        <li>Аудіокнига</li>
+                    </ol>
+                    <h5>Зображення списки:</h5>
+                    <br><br>
+                    <img src="Photo4.jpg" alt="Скріншот списки" width="600">
                 </div>
                 <div id="images" class="content-section">
                     <h4>HTML-код зображення</h4>
-                    <pre><code>
-                &lt;section&gt;
-                    &lt;h2&gt;Зображення&lt;/h2&gt;
-                    &lt;img src="hotel.jpg" alt="Зображення готелю" width="600" height="400"&gt;
-                &lt;/section&gt;
-                    </code></pre>
-                
-                    <h4>Скріншот зображення</h4>
+                    <pre>
+                    &lt;img src="image.jpg" alt="Опис зображення" width="300" height="200" loading="lazy"&gt;
+                    </pre>
                     <img src="photo3.jpg" alt="Скріншот зображення" width="600">
-            <!-- Лабораторна робота 1.2 -->
-            <div id="lab1_2" class="content-section">
-                <h3>Лабораторна робота 1.2</h3>
-                <div id="description">
-                    <h4>Опис предметного середовища</h4>
-                    <p>Опис для лабораторної роботи 1.2...</p>
                 </div>
-                <!-- Інші секції... -->
-            </div>
-            <!-- Додаткові лабораторні роботи -->
-            <div id="lab2" class="content-section">
-                <h3>Лабораторна робота 2</h3>
-                <!-- Вміст лабораторної роботи 2... -->
-            </div>
-            <div id="lab2_1" class="content-section">
-                <h3>Лабораторна робота 2.1</h3>
-                <!-- Вміст лабораторної роботи 2.1... -->
-            </div>
-            <div id="lab3" class="content-section">
-                <h3>Лабораторна робота 3</h3>
-                <!-- Вміст лабораторної роботи 3... -->
+                <div id="conclusion" class="content-section">
+                    <h4>Висновки</h4>
+                    <p>
+                        У процесі виконання лабораторної роботи я здобув цінний досвід у створенні HTML-документів. Основна увага була зосереджена на структуруванні контенту, використанні таблиць, списків і зображень для ефективної організації інформації. 
+                        Я навчився застосовувати елементи HTML для побудови зручних для користувачів веб-сторінок, а також зрозумів важливість кодування у створенні інтуїтивно зрозумілого інтерфейсу. 
+                        Отримані навички дозволяють мені впевнено працювати над подальшими проектами у сфері веб-розробки.
+                    </p>
+                </div>
             </div>
         </div>
     </main>
 <script>
-        // Функція для відображення вибраної лабораторної роботи
         function showLab(labId) {
             const labs = document.querySelectorAll('.content-section');
             labs.forEach(lab => lab.classList.remove('active'));
             document.getElementById(labId).classList.add('active');
         }
-        // Функція для відображення вибраного розділу у вибраній лабораторній роботі
+
         function showSection(sectionId) {
             const activeLab = document.querySelector('.content-section.active');
             if (activeLab) {
@@ -328,11 +168,25 @@
                 activeLab.querySelector(`#${sectionId}`).style.display = 'block';
             }
         }
-        // Ініціалізація: показ першої лабораторної роботи і першого розділу
+
+        function previewImage(event) {
+            const image = document.getElementById('uploadedImage');
+            const file = event.target.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    image.src = e.target.result;
+                    image.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
         document.addEventListener("DOMContentLoaded", () => {
             showLab('lab1');
             showSection('description');
         });
-    </script>
+</script>
 </body>
 </html>
