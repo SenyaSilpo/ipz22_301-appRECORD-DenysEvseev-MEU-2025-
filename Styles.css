@@ -2,12 +2,12 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #081fa3; /* Світлий фон */
+    background-color: #1630c3; /* Світлий фон */
 }
 header {
     padding: 20px;
     display: flex;
-    background-color: #06caec; /* Глибокий червоний заголовок */
+    background-color: #0bb4d1; /* Глибокий червоний заголовок */
     justify-content: space-between;
     align-items: center;
     border-bottom: 4px solid #c4bbac; /* Контрастний нижній край */
