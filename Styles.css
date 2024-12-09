@@ -1,98 +1,218 @@
+/* Загальний стиль для сторінки */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1630c3; /* Світлий фон */
+    background-color: #fffdfd;
 }
+
+/* Стиль для шапки */
 header {
     padding: 20px;
     display: flex;
-    background-color: #0bb4d1; /* Глибокий червоний заголовок */
+    background-color: #ffffff;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 4px solid #c4bbac; /* Контрастний нижній край */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Легке тіньове відображення */
 }
+
 .header-text {
     max-width: 80%;
-    color: #FFFFFF; /* Білий текст для заголовку */
-    font-size: 1.6em; /* Збільшений шрифт для заголовку */
 }
+
 .student-photo {
     max-width: 200px;
     max-height: 200px;
     object-fit: cover;
     margin-left: 20px;
-    border-radius: 15px; /* Округлені кути */
-    border: 4px solid #fffefc; /* Контур з кольору */
 }
+
+/* Стиль для навігації */
 nav {
-    background-color: #98f144; /* Темний коричневий фон для навігації */
+    background-color: #8b8e94;
     padding: 10px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    border-top: 4px solid #459211; /* Верхній край навігації */
 }
+
 nav button {
-    background-color: #13632d; /* Яскравий червоний фон для кнопок */
-    color: #FFFFFF; /* Білий текст */
+    background-color: #e73737;
+    color: #EFECE7;
     border: none;
-    padding: 11px 19px;
+    padding: 10px 15px;
     margin: 5px;
     cursor: pointer;
-    border-radius: 25px; /* Велике округлення */
-    transition: background-color 0.3s, transform 0.2s; /* Анімація при наведені */
+    border-radius: 12px;
+    transition: background-color 0.3s, transform 0.3s;
 }
+
 nav button:hover {
-    background-color: #09ff8c; /* Зміна кольору при наведені */
-    transform: scale(1.05); /* Збільшення кнопки при наведені */
+    background-color: #e04040;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
+
+nav button.active-button {
+    background-color: #fcfdff;
+    color: #87aaf0; /* Темно-синій текст */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Основний контейнер */
 main {
     display: flex;
     padding: 20px;
 }
+
+/* Стиль для зображень */
 .screen-img {
-   max-width: 60%;
-   height: auto;
-   display: block;
-   margin: 0 auto;
-   border: 4px solid #68af25; /* Контур з кольору */
-   border-radius: 15px; /* Округлені кути */
-   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Тіньове відображення */
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    gap: 20px;
 }
+
+/* Стиль для контенту */
+.text-content {
+    background-color: #dad7d3;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.content-section {
+    display: none;
+    width: 100%;
+}
+
+.content-section.active {
+    display: flex;
+    width: 1400px; /*Нерухомий фон під текст, наповнення лабораторних робіт*/
+}
+
+/* Стиль для sidebar */
 .sidebar {
-    width: 220px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     margin-right: 20px;
 }
+
 .sidebar button {
-    background-color: #2649e2; /* Темний фон для кнопок бічної панелі */
-    color: #FFFFFF; /* Білий текст */
+    background-color: #d33b3b;
+    color: #EFECE7;
     border: none;
-    padding: 12px;
+    padding: 10px;
     margin-bottom: 10px;
     cursor: pointer;
-    border-radius: 25px; /* Велике округлення */
-    transition: background-color 0.3s, transform 0.2s; /* Анімація при наведені */
+    border-radius: 12px;
 }
 
 .sidebar button:hover {
-    background-color: #0ac8f8; /* Зміна кольору при наведені */
-    transform: scale(1.05); /* Збільшення кнопки при наведені */
+    background-color: #ee4040;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-.content {
-    flex-grow: 1;
-    background-color: #ffffff; /* Світліший фон для контенту */
-    padding: 20px;
-    border-radius: 15px; /* Округлені кути */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Тіньове відображення */
+.sidebar button.active-button {
+    background-color: #eb5e5e;
+    color: #f9fbff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-.content-section {
-    display: none;
+
+/* Стиль для текстових блоків у секції структури */
+#structure p {
+    white-space: pre-line;
 }
-.content-section.active {
-    display: block;
+
+/* Медіа-запити для адаптивної верстки */
+
+/* Десктопна версія (більше 1200px) */
+@media (min-width: 1200px) {
+    header {
+        padding: 30px;
+    }
+
+    .student-photo {
+        max-width: 250px;
+    }
+
+    .screen-img {
+        max-width: 60%;
+    }
+
+    .sidebar {
+        width: 250px;
+    }
+
+    .content-section.active {
+        width: 1200px; /* Контент знову обмежується */
+    }
+}
+
+/* Планшетна версія (від 768px до 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    header {
+        padding: 25px;
+    }
+
+    .student-photo {
+        max-width: 180px;
+    }
+
+    .screen-img {
+        max-width: 50%;
+    }
+
+    .sidebar {
+        width: 220px;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .content-section.active {
+        width: 100%; /* Контент займає всю ширину */
+    }
+}
+
+/* Мобільна версія (менше 768px) */
+@media (max-width: 767px) {
+    header {
+        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .student-photo {
+        max-width: 150px;
+        margin-top: 15px;
+    }
+
+    .screen-img {
+        max-width: 100%;
+        margin-top: 15px;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-section.active {
+        width: 100%;
+        padding: 10px;
+    }
 }

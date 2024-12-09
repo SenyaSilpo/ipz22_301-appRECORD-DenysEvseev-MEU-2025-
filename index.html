@@ -1,63 +1,74 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Звіти з лабораторних робіт</title>
-    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <div class="header-text">
             <h1>Звіти з лабораторних робіт</h1>
             <p>З дисципліни: Програмування інтернет-застосувань</p>
-            <p>Студент групи ІПЗ_22_301 Євсєєв Денис</p>
+            <p>Студента групи ІПЗ_22_301
+                Євсєєв Денис
+            </p>
         </div>
-        <img src="Photo1.jpg" alt="Фото студента" class="student-photo">
+        <img src="STUDENT.jpg" alt="Фото студента" class="student-photo">
     </header>
+
     <!-- Навігація для вибору лабораторних робіт -->
-     
     <nav>
-        <button onclick="showLab('lab1')">Лабораторна робота 1.1</button>
+        <button onclick="showLab('lab1')">Лабораторна робота 1</button>
         <button onclick="showLab('lab1_2')">Лабораторна робота 1.2</button>
         <button onclick="showLab('lab2')">Лабораторна робота 2</button>
-        <button onclick="showLab('lab2_1')">Лабораторна робота 2.1</button>
+        <button onclick="showLab('lab2_2')">Лабораторна робота 2.2</button>
         <button onclick="showLab('lab3')">Лабораторна робота 3</button>
-        <button onclick="showLab('lab3_1')">Лабораторна робота 3.1</button>
-        <button onclick="showLab('lab4')">Лабораторна робота 4.1</button>
-        <button onclick="showLab('lab4_1')">Лабораторна робота 4.2</button>
-        <button onclick="showLab('lab5')">Лабораторна робота 5.1</button>
-        <button onclick="showLab('lab5_1')">Лабораторна робота 5.2</button>
+        <button onclick="showLab('lab3_2')">Лабораторна робота 3.2</button>
+        <button onclick="showLab('lab4')">Лабораторна робота 4</button>
+        <button onclick="showLab('lab4_2')">Лабораторна робота 4.2</button>
+        <button onclick="showLab('lab5')">Лабораторна робота 5</button>
+        <button onclick="showLab('lab5_2')">Лабораторна робота 5.2</button>
     </nav>
+
     <main>
-        <!-- Слайдбар для вибору розділу -->
-        <div class="sidebar">
-            <button onclick="showSection('description')">Опис предметного середовища</button>
-            <button onclick="showSection('goal')">Тема, мета, місце розташування лаби 1</button>
-            <button onclick="showSection('structure')">Cтруктура документа</button>
-            <button onclick="showSection('tables')">HTML-код таблиць</button>
-            <button onclick="showSection('lists')">HTML-код списки</button>
-            <button onclick="showSection('images')">HTML-код зображення</button>
-            <button onclick="showSection('conclusion')">Висновки</button>
-        </div>
         <!-- Контент для кожної лабораторної роботи -->
         <div class="content">
             <!-- Лабораторна робота 1 -->
             <div id="lab1" class="content-section">
-                <div id="description">
+                <div class="sidebar">
+                    <button onclick="showSection('description', 'lab1')">Опис предметного середовища</button>
+                    <button onclick="showSection('goal', 'lab1')">Тема, мета, місце розташування сайту та звіту</button>
+                    <button onclick="showSection('structure', 'lab1')">СТРУКТУРА ДОКУМЕНТА</button>
+                    <button onclick="showSection('tables', 'lab1')">HTML-код таблиць</button>
+                    <button onclick="showSection('list', 'lab1')">HTML-код списку</button>
+                    <button onclick="showSection('images', 'lab1')">HTML-код зображення</button>
+                    <button onclick="showSection('conclusion', 'lab1')">Висновки</button>
+                </div>
+                <div id="description" class="lab1-section content-section text-content">
                     <h4>Опис предметного середовища</h4>
+                    <p>Бізнес логіка:</p>
                     <p>
                         <strong>Тема:</strong> Створення веб-сайту магазину для книгарні "BookMarket"<br />
-                        <strong>Мета проєкту:</strong> 
-                        Створити зручну та привабливу онлайн-платформу для купівлі книг, що пропонує широкий асортимент літератури для різних вікових груп та жанрів. 
+                        <strong>Мета проєкту:</strong> Створити зручну та привабливу онлайн-платформу для купівлі книг, що пропонує широкий асортимент літератури для різних вікових груп та жанрів. 
                         Сайт має забезпечувати користувачам можливість легко знаходити потрібні книги, ознайомлюватись з відгуками, отримувати рекомендації на основі їх інтересів, а також надавати зручні способи оплати та доставки.
-                        Основною метою є підвищення продажів та формування лояльності до бренду.
+                        Основною метою є підвищення продажів та формування лояльності до бренду.<br />
                     </p>
+                    
+                    
+                   
                 </div>
-                <div id="goal">
-                    <p><strong>Тема:</strong> Структура HTML-документа. Вибір предметної галузі, робота з посиланнями, таблицями, зображеннями, списками в html-документі.</p>
-                    <br/>
-                    <p><strong>Мета:</strong> Придбати практичні навички роботи з HTML-документом, таблицями, зображеннями, посиланнями, списками, формами. Створити шаблон звітного HTML-документа для відображення результатів роботи всіх лабораторних робіт.</p>
+                <div id="goal" class="lab1-section content-section text-content">
+                    <p><strong>Тема:</strong>СТРУКТУРА HTML-ДОКУМЕНТА. ВИБІР ПРЕДМЕТНОЇ ГАЛУЗІ.
+                        РОБОТА З ПОСИЛАННЯМИ, ТАБЛИЦЯМИ, ЗОБРАЖЕННЯМИ, СПИСКАМИ в HTML-ДОКУМЕНТІ.</p><br />
+                    <p><strong>Мета:</strong>придбати практичні навички роботи з HTML-документом, таблицями, ,
+                        зображеннями, посиланнями, списками, формами
+                        Створити шаблон звітного HTML-документом для відображення результатів роботи всіх лабораторних
+                        робіт.
+                    </p>
                     <a href="https://senyasilpo.github.io/ipz22_301-appWEB-Evseev-Denys-MEU-2025-/">Посилання на
                         репозиторій на живу сторінку власного WEB-застосунку</a><br />
                     <a href="https://github.com/SenyaSilpo/ipz22_301-appWEB-Evseev-Denys-MEU-2025-.git">Посилання на
@@ -71,46 +82,63 @@
                     <a href="https://senyasilpo.github.io/-ipz22_301--app-INDEPENDENT--Denys-Evseev-MEU-2025-/">Посилання на
                         репозиторій живу сторінку з самостійними роботами</a><br />
                 </div>
-                <div id="structure">
+                <div id="structure" class="lab1-section content-section text-content">
                     <h4>СТРУКТУРА ДОКУМЕНТА</h4>
-                    <pre>
-                    &lt;!DOCTYPE html&gt;
-                    &lt;html lang="uk"&gt;
-                    &lt;head&gt;
-                        &lt;meta charset="UTF-8"&gt;
-                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-                        &lt;title&gt;BookMart - Магазин Книг&lt;/title&gt;
-                    &lt;/head&gt;
-                    &lt;body&gt;
-                        &lt;main&gt;
-                            &lt;h2&gt;Зображення&lt;/h2&gt;
-                            &lt;div&gt;
-                                &lt;img src="Book1.jpg" alt="Назва книги 1" width="200"&gt;
-                                &lt;h3&gt;Відьмак 4&lt;/h3&gt;
-                                &lt;p&gt;&lt;strong&gt;Автор:&lt;/strong&gt; Артем Мейсон&lt;/p&gt;
-                                &lt;p&gt;&lt;strong&gt;Ціна:&lt;/strong&gt; 450 грн&lt;/p&gt;
-                                &lt;ul&gt;
-                                    &lt;li&gt;Фентезі&lt;/li&gt;
-                                    &lt;li&gt;Пригоди&lt;/li&gt;
-                                    &lt;li&gt;Епопея&lt;/li&gt;
-                                &lt;/ul&gt;
-                                &lt;ol&gt;
-                                    &lt;li&gt;Тверда обкладинка&lt;/li&gt;
-                                    &lt;li&gt;М'яка обкладинка&lt;/li&gt;
-                                    &lt;li&gt;Електронний формат&lt;/li&gt;
-                                &lt;/ol&gt;
-                            &lt;/div&gt;
-                        &lt;/main&gt;
-                    &lt;/body&gt;
-                    &lt;/html&gt;
-                    
-                    </pre>
-                   
+                    <p>&lt;!DOCTYPE html&gt;
+                        &lt;html lang="uk"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt;
+                            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                            &lt;title&gt;BookMart - Магазин Книг&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;main&gt;
+                                &lt;h2&gt;Зображення&lt;/h2&gt;
+                                &lt;div&gt;
+                                    &lt;img src="Book1.jpg" alt="Назва книги 1" width="200"&gt;
+                                    &lt;h3&gt;Відьмак 4&lt;/h3&gt;
+                                    &lt;p&gt;&lt;strong&gt;Автор:&lt;/strong&gt; Артем Мейсон&lt;/p&gt;
+                                    &lt;p&gt;&lt;strong&gt;Ціна:&lt;/strong&gt; 450 грн&lt;/p&gt;
+                                    &lt;ul&gt;
+                                        &lt;li&gt;Фентезі&lt;/li&gt;
+                                        &lt;li&gt;Пригоди&lt;/li&gt;
+                                        &lt;li&gt;Епопея&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                    &lt;ol&gt;
+                                        &lt;li&gt;Тверда обкладинка&lt;/li&gt;
+                                        &lt;li&gt;М'яка обкладинка&lt;/li&gt;
+                                        &lt;li&gt;Електронний формат&lt;/li&gt;
+                                    &lt;/ol&gt;
+                                &lt;/div&gt;
+                            &lt;/main&gt;
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                    </p>
                 </div>
-                <div id="tables" class="content-section">
-                    <h4>HTML-код таблиці</h4>
+                <div id="tables" class="lab1-section content-section text-content">
+                    <img src="tabl.jpg" alt="Фото коду таблиці" class="screen-img">
+                   
+                    <p>
+                        HTML таблиці використовуються для представлення даних у форматі рядків і стовпців, що робить їх
+                        зручними для
+                        відображення структурованої інформації, такої як таблиці з даними, статистикою чи звітами.
+                    </p>
+                    <p>
+                        <strong>Основні елементи таблиць:</strong>
+                    <ul>
+                        <li><code>&lt;table&gt;</code>: оголошує саму таблицю.</li>
+                        <li><code>&lt;tr&gt;</code> (table row): визначає рядок таблиці.</li>
+                        <li><code>&lt;th&gt;</code> (table header): визначає заголовок стовпця (зазвичай текст
+                            відображається жирним шрифтом
+                            та по центру).</li>
+                        <li><code>&lt;td&gt;</code> (table data): визначає клітинку з даними в рядку таблиці.</li>
+                    </ul>
+                    </p>
+                    <p>
+                        <strong>Приклад:</strong>
+                    </p>
                     <pre>
-                    &lt;table border="1" cellpadding="10" cellspacing="0"&gt;
+                        &lt;table border="1" cellpadding="10" cellspacing="0"&gt;
                         &lt;thead&gt;
                             &lt;tr&gt;
                                 &lt;th&gt;Назва книги&lt;/th&gt;
@@ -128,79 +156,331 @@
                             &lt;/tr&gt;
                         &lt;/tbody&gt;
                     &lt;/table&gt;
-                    </pre>
-                    <img src="Photo2.jpg" alt="Скріншот таблиці" width="600">
+                        </pre>
                 </div>
-                <div id="lists" class="content-section">
-                    <h4 id="lists">HTML-код списки</h4>
-                    <p><strong>Жанри:</strong></p>
-                    <ol>
-                        <li>фентезі</li>
-                        <li>Пригоди</li>
-                        <li>Епопея</li>
-                    </ol>
-                    <p><strong>Формати:</strong></p>
-                    <ol>
-                        <li>Тверда обкладинка</li>
-                        <li>М'яка обкладинка</li>
-                        <li>Аудіокнига</li>
-                    </ol>
-                    <h5>Зображення списки:</h5>
-                    <br><br>
-                    <img src="Photo4.jpg" alt="Скріншот списки" width="600">
-                </div>
-                <div id="images" class="content-section">
-                    <h4>HTML-код зображення</h4>
-                    <pre>
-                    &lt;img src="image.jpg" alt="Опис зображення" width="300" height="200" loading="lazy"&gt;
-                    </pre>
-                    <img src="photo3.jpg" alt="Скріншот зображення" width="600">
-                </div>
-                <div id="conclusion" class="content-section">
-                    <h4>Висновки</h4>
+                <div id="list" class="lab1-section content-section text-content">
+                    <img src="spus.jpg" alt="Фото коду таблиці" class="screen-img">
+           
                     <p>
-                        У процесі виконання лабораторної роботи я здобув цінний досвід у створенні HTML-документів. Основна увага була зосереджена на структуруванні контенту, використанні таблиць, списків і зображень для ефективної організації інформації. 
-                        Я навчився застосовувати елементи HTML для побудови зручних для користувачів веб-сторінок, а також зрозумів важливість кодування у створенні інтуїтивно зрозумілого інтерфейсу. 
-                        Отримані навички дозволяють мені впевнено працювати над подальшими проектами у сфері веб-розробки.
+                        HTML дозволяє створювати списки для структурування контенту. Існує два основних типи списків:
+                        нумеровані
+                        (упорядковані) і ненумеровані (неупорядковані).
                     </p>
+                    <p>
+                        <strong>Основні елементи списків:</strong>
+                    <ul>
+                        <li><code>&lt;ul&gt;</code>: ненумерований список (unordered list).</li>
+                        <li><code>&lt;ol&gt;</code>: нумерований список (ordered list).</li>
+                        <li><code>&lt;li&gt;</code>: пункт списку (list item).</li>
+                    </ul>
+                    </p>
+                    <p>
+                        <strong>Приклад ненумерованого списку:</strong>
+                    </p>
+                    <pre>
+                            &lt;ul&gt;
+                                &lt;li&gt;Пункт 1&lt;/li&gt;
+                                &lt;li&gt;Пункт 2&lt;/li&gt;
+                            &lt;/ul&gt;
+                        </pre>
+                    <p>
+                        <strong>Приклад нумерованого списку:</strong>
+                    </p>
+                    <pre>
+                            &lt;ol&gt;
+                                &lt;li&gt;Перше дію&lt;/li&gt;
+                                &lt;li&gt;Друге дію&lt;/li&gt;
+                            &lt;/ol&gt;
+                        </pre>
+                </div>
+                <div id="images" class="lab1-section content-section text-content">
+                    <img src="zobr.jpg" alt="Фото коду таблиці" class="screen-img">
+                    
+                    <p>
+                        HTML-код зображень використовується для вставлення графіки в веб-сторінку. Зображення можуть
+                        бути статичними або
+                        анімованими, і вони зазвичай використовуються для ілюстрації контенту, прикраси або надання
+                        додаткової інформації.
+                    </p>
+                    <p>
+                        <strong>Основні елементи зображень:</strong>
+                    <ul>
+                        <li><code>&lt;img&gt;</code>: використовується для вставлення зображення. Основні атрибути:</li>
+                        <ul>
+                            <li><code>src</code>: вказує URL-адресу зображення.</li>
+                            <li><code>alt</code>: альтернативний текст, який відображається, якщо зображення не може
+                                бути завантажено, або
+                                використовується для доступності.</li>
+                        </ul>
+                    </ul>
+                    </p>
+                    <p>
+                        <strong>Приклад:</strong>
+                    </p>
+                    <pre>
+                            &lt;img src="path/to/image.jpg" alt="Опис зображення" width="300" height="200"&gt;
+                        </pre>
+                </div>
+                <div id="conclusion" class="lab1-section content-section text-content">
+                    <h4>Висновки</h4>
+                    <p> У процесі виконання лабораторної роботи я здобув цінний досвід у створенні HTML-документів. Основна увага була зосереджена на структуруванні контенту, використанні таблиць, списків і зображень для ефективної організації інформації. 
+                        Я навчився застосовувати елементи HTML для побудови зручних для користувачів веб-сторінок, а також зрозумів важливість кодування у створенні інтуїтивно зрозумілого інтерфейсу. 
+                        Отримані навички дозволяють мені впевнено працювати над подальшими проектами у сфері веб-розробки.</p>
                 </div>
             </div>
-        </div>
-    </main>
+
+    
+    
+
+</div>
+</div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Лабораторна робота 2_2 -->
+
+  <div id="lab2_2" class="content-section">
+    <div class="sidebar">
+        <button onclick="showSection('goal2_2', 'lab2_2')">Тема, мета, місце розташування сайту та звіту</button>
+        <button onclick="showSection('desktop', 'lab2_2')">Десктопна версія</button>
+        <button onclick="showSection('tablet', 'lab2_2')">Планшетна версія</button>
+        <button onclick="showSection('mobile', 'lab2_2')">Мобільна версія</button>
+        <button onclick="showSection('approach', 'lab2_2')">Пояснення підходу</button>
+        <button onclick="showSection('logic-operators', 'lab2_2')">Логічні оператори</button>
+        <button onclick="showSection('conclusions-2_2', 'lab2_2')">Висновки</button>
+    </div>
+
+    <div id="goal2_2" class="lab2_2-section content-section text-content">
+        <p><strong>Тема:</strong>АДАПТИВНА ВЕРСТКА. МЕДІА-ЗАПИТИ. МЕТАТЕГ VIEWPORT.
+        </p><br />
+        <p><strong>Мета:</strong>Адаптивна верстка. Медіа-запити. Медіа-типи. Медіа-функції.Метатег viewport. Інструменти розробника. Стратегія Mobile
+        First.<br />
+
+        <a href="https://senyasilpo.github.io/ipz22_301-appWEB-Evseev-Denys-MEU-2025-/">Посилання на
+            репозиторій на живу сторінку власного WEB-застосунку</a><br />
+        <a href="https://github.com/SenyaSilpo/ipz22_301-appWEB-Evseev-Denys-MEU-2025-.git">Посилання на
+            репозиторій власного WEB-застосунку</a><br />
+        <a href="https://github.com/SenyaSilpo/ipz22_301-appRECORD-DenysEvseev-MEU-2025-.git">Посилання на
+            репозиторій звітного HTML-документа</a><br />
+        <a href="https://senyasilpo.github.io/ipz22_301-appRECORD-DenysEvseev-MEU-2025-/">Посилання на
+            репозиторій на живу сторінку звітного HTML-документ</a><br />
+        <a href="https://github.com/SenyaSilpo/-ipz22_301--app-INDEPENDENT--Denys-Evseev-MEU-2025-.git">Посилання на
+            репозиторій з самостійними роботами</a><br />
+        <a href="https://senyasilpo.github.io/-ipz22_301--app-INDEPENDENT--Denys-Evseev-MEU-2025-/">Посилання на
+            репозиторій живу сторінку з самостійними роботами</a><br />
+    </div>
+
+    <div id="desktop" class="lab2_2-section content-section text-content">
+        <h4>Десктопна версія</h4>
+        <p>Десктопна версія оптимізована для екранів шириною понад <strong>1200px</strong>.</p>
+        <p>Для десктопів використовується широка структура макета із центральним контентом, шрифтами стандартного
+            розміру та великою кількістю простору між елементами.</p>
+        <pre><code>
+            /* Десктопна версія (більше 1200px) */
+            @media (min-width: 1200px) {
+                header {
+                    padding: 30px;
+                }
+            
+                .student-photo {
+                    max-width: 250px;
+                }
+            
+                .screen-img {
+                    max-width: 60%;
+                }
+            
+                .sidebar {
+                    width: 250px;
+                }
+            
+                .content-section.active {
+                    width: 1200px; /* Контент знову обмежується */
+                }
+            }
+        </code></pre>
+    </div>
+
+    <div id="tablet" class="lab2_2-section content-section text-content">
+        <h4>Планшетна версія</h4>
+        <p>Планшетна версія оптимізована для ширини екранів <strong>від 768px до 1199px</strong>.</p>
+        <p>Основні зміни: зменшення розміру шрифтів, оптимізація відступів, перегрупування елементів для забезпечення
+            кращої читабельності.</p>
+    <pre><code>
+        /* Планшетна версія (від 768px до 1199px) */
+        @media (max-width: 1199px) and (min-width: 768px) {
+            header {
+                padding: 25px;
+            }
+        
+            .student-photo {
+                max-width: 180px;
+            }
+        
+            .screen-img {
+                max-width: 50%;
+            }
+        
+            .sidebar {
+                width: 220px;
+            }
+        
+            main {
+                flex-direction: column;
+                padding: 15px;
+            }
+        
+            .content-section.active {
+                width: 100%; /* Контент займає всю ширину */
+            }
+        }
+    </code></pre>
+</div>
+
+    <div id="mobile" class="lab2_2-section content-section text-content">
+        <h4>Мобільна версія</h4>
+        <p>Мобільна версія розроблена для ширини екранів <strong>менше 768px</strong>.</p>
+        <p>Основні зміни: вертикальне розташування елементів, максимальна адаптація навігації, приховування неважливих
+            блоків.</p>
+        <pre><code>
+            /* Мобільна версія (менше 768px) */
+            @media (max-width: 767px) {
+                header {
+                    padding: 15px;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            
+                .student-photo {
+                    max-width: 150px;
+                    margin-top: 15px;
+                }
+            
+                .screen-img {
+                    max-width: 100%;
+                    margin-top: 15px;
+                }
+            
+                .sidebar {
+                    width: 100%;
+                    margin-right: 0;
+                }
+            
+                nav {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            
+                .content-section.active {
+                    width: 100%;
+                    padding: 10px;
+                }
+            }
+                  
+                </code></pre>
+    </div>
+
+    <div id="approach" class="lab2_2-section content-section text-content">
+        <h4>Пояснення підходу</h4>
+        <p>Для адаптивної верстки використані брейкпоінти <strong>768px</strong> та <strong>1024px</strong>. Для кожного
+            розміру екрану створено окремі стилі, що забезпечують оптимальний UX. Головні аспекти:</p>
+        <ul>
+            <li>Великий розмір шрифтів та просторі блоки для десктопів.</li>
+            <li>Оптимізація відступів для планшетів.</li>
+            <li>Спрощення структури для мобільних пристроїв.</li>
+        </ul>
+    </div>
+
+    <div id="logic-operators" class="lab2_2-section content-section text-content">
+        <h4>Логічні оператори</h4>
+        <p>Логічні оператори (and, not, or) у медіа-запитах дозволяють комбінувати кілька умов для точнішої настройки стилів для різних пристроїв. Це дає можливість створювати гнучкіші та більш оптимізовані дизайни для кожного типу екрана.
+        </code></pre>
+    </div>
+
+    <div id="conclusions-2_2" class="lab2_2-section content-section text-content">
+        <h2>Висновки до лабораторної роботи №4</h2>
+        <ol>
+            <li>
+                <strong>Розробка адаптивної верстки:</strong>
+                <p>У ході лабораторної роботи було розроблено адаптивну верстку для трьох основних типів пристроїв: десктопів, планшетів і мобільних телефонів.
+         Використання медіа-запитів дозволило реалізувати стилі, оптимізовані для кожного розміру екрану, що забезпечило зручне використання сайту на будь-якому пристрої.</p>
+            </li>
+            <li>
+                <strong>Десктопна версія:</strong>
+                <p>Верстка для десктопних пристроїв була налаштована для екранів шириною понад 1200px.
+                     Було приділено увагу правильному розташуванню елементів, оптимальній ширині контейнерів та коректному розміру шрифтів
+                      для забезпечення зручного перегляду і читабельності.</p>
+            </li>
+            <li>
+                <strong>Планшетна версія:</strong>
+                <p>Для екранів від 768px до 1199px застосовано стилі, що дозволяють компактно розташувати елементи і забезпечити зручність навігації.
+                     Було адаптовано меню і контент для зручного перегляду на пристроях середнього розміру.</p>
+            </li>
+            <li>
+                <strong>Мобільна версія:</strong>
+                <p>Для пристроїв з екранами менше 768px застосовано мінімалістичний дизайн, що включає лише найнеобхідніші елементи.
+                     Це забезпечило швидке завантаження сторінки та зручне користування на малих екранах.
+            <li>
+                <strong>Використання логічних операторів:</strong>
+                <p>Використання логічних операторів:
+                    Під час розробки адаптивної верстки застосовано логічні оператори and та not у медіа-запитах. 
+                    Це дозволило точно налаштувати стилі для різних пристроїв, підвищивши ефективність адаптації дизайну.</p>
+            </li>
+            <li>
+                <strong>Висновок:</strong>
+                <p>Отримані навички з адаптивної верстки допоможуть розробляти сучасні веб-сторінки, які задовольняють потреби користувачів на різних пристроях. 
+                    Використання медіа-запитів і логічних операторів забезпечує 
+                    високий рівень гнучкості та ефективності дизайну, що робить сайти зручними і доступними для всіх користувачів.</p>
+            </li>
+        </ol>
+    </div>
+</div>
 <script>
-        function showLab(labId) {
-            const labs = document.querySelectorAll('.content-section');
-            labs.forEach(lab => lab.classList.remove('active'));
-            document.getElementById(labId).classList.add('active');
+    // Функція для відображення вибраної лабораторної роботи
+    function showLab(labId) {
+        const labs = document.querySelectorAll('.content-section');
+        labs.forEach(lab => lab.classList.remove('active'));
+        document.getElementById(labId).classList.add('active');
+    }
+
+    // Функція для відображення вибраного розділу у вибраній лабораторній роботі
+    function showSection(sectionId, labId) {
+        const activeLab = document.getElementById(labId);
+        if (activeLab) {
+            const sections = activeLab.querySelectorAll(`.${labId}-section`);
+            sections.forEach(section => section.style.display = 'none');
+            activeLab.querySelector(`#${sectionId}`).style.display = 'block';
         }
+    }
 
-        function showSection(sectionId) {
-            const activeLab = document.querySelector('.content-section.active');
-            if (activeLab) {
-                const sections = activeLab.querySelectorAll('div');
-                sections.forEach(section => section.style.display = 'none');
-                activeLab.querySelector(`#${sectionId}`).style.display = 'block';
-            }
-        }
+    // Ініціалізація: показ першої лабораторної роботи і першого розділу
+    document.addEventListener("DOMContentLoaded", () => {
+        showLab('lab1');
+        showSection('description', 'lab1');
+    });
 
-        function previewImage(event) {
-            const image = document.getElementById('uploadedImage');
-            const file = event.target.files[0];
-
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    image.src = e.target.result;
-                    image.style.display = 'block';
-                };
-                reader.readAsDataURL(file);
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            showLab('lab1');
-            showSection('description');
+    document.querySelectorAll('.sidebar button').forEach(button => {
+        button.addEventListener('click', () => {
+            document.querySelectorAll('.sidebar button').forEach(btn => btn.classList.remove('active-button'));
+            button.classList.add('active-button');
         });
+    });
+
+    document.querySelectorAll('nav button').forEach(button => {
+        button.addEventListener('click', () => {
+            document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active-button'));
+            button.classList.add('active-button');
+        });
+    });
 </script>
 </body>
 </html>
