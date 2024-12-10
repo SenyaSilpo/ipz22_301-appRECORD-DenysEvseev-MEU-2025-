@@ -703,11 +703,17 @@
                                     body {
                                         font-family: 'Roboto', sans-serif;
                                     }
-                                
+                                    
                                     h1, h2, h3 {
                                         font-family: 'Roboto', sans-serif;
                                         font-weight: bold;
                                     }
+                                    
+                                    p {
+                                        font-family: 'Roboto', sans-serif;
+                                        font-weight: normal;
+                                    }
+                                    
                                     </code></pre>
 
         <h3>2. Контури</h3>
@@ -715,24 +721,26 @@
             <code>box-shadow</code> для контейнерів.
         </p>
         <pre><code>
-                                    h1 {
-                                        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-                                    }
-                                
-                                    .content-section {
-                                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-                                    }
+            h1 {
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            }
+            
+            .content-section {
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+            
                                     </code></pre>
 
         <h3>3. Фон</h3>
         <p>Фон для елементів може бути однотонним або градієнтним. Ось приклад градієнтного фону для секцій:
         </p>
         <pre><code>
-                                    .content-section {
-                                        background: linear-gradient(135deg, #f6d365, #fda085);
-                                        padding: 20px;
-                                        border-radius: 8px;
-                                    }
+            .content-section {
+                background: linear-gradient(135deg, #f6d365, #fda085);
+                padding: 20px;
+                border-radius: 8px;
+            }
+            
                                     </code></pre>
 
         <h3>4. Колір тексту</h3>
@@ -741,42 +749,44 @@
             Приклад для заголовків:
         </p>
         <pre><code>
-                                    h1 {
-                                        color: #2c3e50;
-                                    }
-                                
-                                    p {
-                                        color: #7f8c8d;
-                                    }
-                                
-                                    .highlight {
-                                        color: #e74c3c;
-                                    }
+            h1 {
+                color: #2c3e50;
+            }
+            
+            p {
+                color: #7f8c8d;
+            }
+            
+            .highlight {
+                color: #e74c3c;
+            }
+            
                                     </code></pre>
 
         <h3>5. CSS-властивості для таблиць</h3>
         <p>Таблиці можна стилізувати за допомогою CSS, додаючи контури, відступи та змінюючи кольори фону.
         </p>
         <pre><code>
-                                    table {
-                                        width: 100%;
-                                        border-collapse: collapse;
-                                    }
-                                
-                                    th, td {
-                                        border: 1px solid #ccc;
-                                        padding: 10px;
-                                        text-align: left;
-                                    }
-                                
-                                    th {
-                                        background-color: #3498db;
-                                        color: white;
-                                    }
-                                
-                                    td {
-                                        background-color: #ecf0f1;
-                                    }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            
+            th, td {
+                border: 1px solid #ccc;
+                padding: 10px;
+                text-align: left;
+            }
+            
+            th {
+                background-color: #3498db;
+                color: white;
+            }
+            
+            td {
+                background-color: #ecf0f1;
+            }
+            
                                     </code></pre>
 
         <h3>6. Багаторівневі списки</h3>
@@ -785,17 +795,18 @@
             та <code>margin</code>.
         </p>
         <pre><code>
-                                    ul {
-                                        list-style-type: none;
-                                    }
-                                
-                                    li {
-                                        margin: 5px 0;
-                                    }
-                                
-                                    li ul {
-                                        margin-left: 20px;
-                                    }
+            ul {
+                list-style-type: none;
+            }
+            
+            li {
+                margin: 5px 0;
+            }
+            
+            li ul {
+                margin-left: 20px;
+            }
+            
                                     </code></pre>
 
     </div>
@@ -805,48 +816,49 @@
             приклад анімації
             для кнопки:</p>
         <pre><code>
-                        .button {
-                            background-color: #3498db;
-                            color: white;
-                            padding: 10px 20px;
-                            border-radius: 4px;
-                            cursor: pointer;
-                            transition: background-color 0.3s ease;
-                        }
-                                                        
-                        .button:hover {
-                            background-color: #2980b9;
-                        }
-                                                    
-                        .button:active {
-                            transform: scale(0.95);
-                        }
+            .button {
+                background-color: #3498db;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+            }
+            
+            .button:hover {
+                background-color: #2980b9;
+            }
+            
+            .button:active {
+                transform: scale(0.95);
+            }
+            
                     </code></pre>
 
         <h3>Приклад таблиці</h3>
         <table>
             <thead>
                 <tr>
-                    <th>Ім'я</th>
-                    <th>Прізвище</th>
-                    <th>Вік</th>
+                    <th>Назва книги</th>
+                    <th>Автор</th>
+                    <th>Ціна</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Іван</td>
-                    <td>Петренко</td>
-                    <td>25</td>
+                    <td>Гаррі Поттер і Філософський камінь</td>
+                    <td>Дж. К. Ролінг</td>
+                    <td>250 грн</td>
                 </tr>
                 <tr>
-                    <td>Марія</td>
-                    <td>Іванова</td>
-                    <td>30</td>
+                    <td>1984</td>
+                    <td>Джордж Орвелл</td>
+                    <td>200 грн</td>
                 </tr>
                 <tr>
-                    <td>Олександр</td>
-                    <td>Сидоренко</td>
-                    <td>28</td>
+                    <td>Мистецтво війни</td>
+                    <td>Сунь-цзи</td>
+                    <td>180 грн</td>
                 </tr>
             </tbody>
         </table>
@@ -870,16 +882,19 @@
     <div id="conclusions-1_2" class="lab1_2-section content-section text-content">
         <h2>Висновки</h2>
         <p>
-            У процесі виконання роботи було отримано практичні навички використання каскадних таблиць стилів
-            (CSS) для
-            оформлення HTML-документів. Ми розглянули та реалізували такі методи підключення стилів:
-        </p>
-        <ul>
-            <li>Вбудовані стилі (inline styles) – для одноразового форматування елементів.</li>
-            <li>Внутрішні стилі (internal styles) – для роботи з окремими сторінками.</li>
-            <li>Зовнішні стилі (external styles) – для організації та підтримки великих проєктів.</li>
-            <li>Метод <code>@import</code> – для підключення додаткових файлів стилів.</li>
-        </ul>
+            У процесі виконання роботи було отримано практичні навички використання каскадних таблиць стилів (CSS) для оформлення веб-сайту магазину книг. Реалізовано та впроваджено наступні методи підключення стилів:
+
+Вбудовані стилі (inline styles): застосовувалися для одноразового форматування елементів, таких як промо-текст книг або кнопки "Додати до кошика".
+Внутрішні стилі (internal styles): використовувалися для стилізації окремих сторінок, наприклад, сторінки опису книги.
+Зовнішні стилі (external styles): забезпечували централізоване управління стилями для всього сайту.
+Метод @import: застосовувався для підключення додаткових бібліотек, таких як Google Fonts.
+Розглянуто принципи роботи із селекторами: тегів, класів, ідентифікаторів, атрибутів, дочірніх та сусідніх елементів. Особливу увагу приділено створенню адаптивного дизайну для полегшення доступу до магазину книг із мобільних пристроїв.
+
+Додатково:
+
+Використано анімації для кнопок, щоб покращити враження користувача.
+Застосовано різні властивості CSS для оформлення тексту (наприклад, опису книг), таблиць (каталог книг), фону (зображення жанрів) і списків (жанри книг).
+Висновок: використання CSS дозволяє створювати естетичні, функціональні та зручні для користувачів веб-сторінки. Завдяки застосуванню сучасних CSS-технік сайт магазину книг став не тільки інформативним, а й візуально привабливим.
         <p>
             Вивчено принципи використання селекторів: тегів, класів, ідентифікаторів, атрибутів, дочірніх та
             сусідніх

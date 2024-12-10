@@ -3,14 +3,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fffdfd;
+    background-color: #c0ced1;
 }
 
 /* Стиль для шапки */
 header {
     padding: 20px;
     display: flex;
-    background-color: #ffffff;
+    background-color: #c0ced1;
     justify-content: space-between;
     align-items: center;
 }
