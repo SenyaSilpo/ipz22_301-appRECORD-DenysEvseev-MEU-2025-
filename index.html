@@ -234,6 +234,852 @@
 </div> 
 
 
+<!-- Лабораторна робота 2 -->
+<div id="lab2" class="content-section">
+    <div class="sidebar">
+        <button onclick="showSection('goal-2', 'lab2')">Тема, мета, місце розташування сайту та
+            звіту</button>
+        <button onclick="showSection('task1', 'lab2')">Завдання №1.Зовнішній вигляд макету. Код
+            макету</br></button>
+        <button onclick="showSection('task2', 'lab2')">Завдання №2</button>
+        <button onclick="showSection('fixedTableLayout', 'lab2')">Фіксована таблична верстка</button>
+        <button onclick="showSection('fluidTableLayout', 'lab2')">Гумова таблична верстка</button>
+        <button onclick="showSection('fixedBlockLayout', 'lab2')">Фіксована блокова верстка</button>
+        <button onclick="showSection('fluidBlockLayout', 'lab2')">Гумова блокова верстка</button>
+        <button onclick="showSection('mytask2', 'lab2')">Завдання 2, 5 варіант та висновки</button>
+        <button onclick="showSection('task3Flexbox', 'lab2')">Завдання №3 FLEXBOX</button>
+        <button onclick="showSection('flexboxScreenshot', 'lab2')">Скріншот сторінки (Flexbox)</button>
+        <button onclick="showSection('flexboxHTMLCode', 'lab2')">HTML-код (Flexbox)</button>
+        <button onclick="showSection('flexboxCSSCode', 'lab2')">CSS-код (Flexbox)</button>
+        <button onclick="showSection('conclusions-2', 'lab2')">Висновки</button>
+    </div>
+    <div id="goal-2" class="lab2-section content-section text-content">
+        <p><strong>Тема:</strong>ВЕРСТКА HTML-ДОКУМЕНТУ. БЛОКОВА ВЕРСТКА. ВЕРСТКА ЗАСОБАМИ CSS та FLEXBOX.
+        </p><br />
+        <p><strong>Мета:</strong></br>⎯ придбати практичні навички роботи верстки сторінок засобами CSS,
+            верстки на основі
+            плаваючих елементів, з’ясувати
+            переваги та недоліки типів макетів веб-сторінок</br>
+            ⎯ придбати практичні навички роботи верстки сторінок засобами CSS та FLEXBOX
+        </p>
+        <a href="https://senyasilpo.github.io/ipz22_301-appWEB-Evseev-Denys-MEU-2025-/">Посилання на
+            репозиторій на живу сторінку власного WEB-застосунку</a><br />
+        <a href="https://github.com/SenyaSilpo/ipz22_301-appWEB-Evseev-Denys-MEU-2025-.git">Посилання на
+            репозиторій власного WEB-застосунку</a><br />
+        <a href="https://github.com/SenyaSilpo/ipz22_301-appRECORD-DenysEvseev-MEU-2025-.git">Посилання на
+            репозиторій звітного HTML-документа</a><br />
+        <a href="https://senyasilpo.github.io/ipz22_301-appRECORD-DenysEvseev-MEU-2025-/">Посилання на
+            репозиторій на живу сторінку звітного HTML-документ</a><br />
+        <a href="https://github.com/SenyaSilpo/-ipz22_301--app-INDEPENDENT--Denys-Evseev-MEU-2025-.git">Посилання на
+            репозиторій з самостійними роботами</a><br />
+        <a href="https://senyasilpo.github.io/-ipz22_301--app-INDEPENDENT--Denys-Evseev-MEU-2025-/">Посилання на
+            репозиторій живу сторінку з самостійними роботами</a><br />
+    </div>
+    <div id="task1" class="lab2-section content-section text-content">
+        <h2>Опис особливостей макету</h2>
+
+        <h3>1. Блокова гумова верстка</h3>
+        <p>
+            Макет побудований за принципом блокової верстки, де основні елементи, такі як
+            <code>header</code>,
+           
+        </p>
+        <pre><code>
+                                                                    /* Приклад гумової верстки */
+                                                                    .container {
+                                                                        width: 90%; /* Ширина контейнера змінюється відповідно до ширини вікна */
+                                                                        margin: 0 auto;
+                                                                        max-width: 1200px; /* Максимальна ширина для великих екранів */
+                                                                    }
+                                                                </code></pre>
+
+        <h3>2. Використання Flexbox</h3>
+        <p>
+            У макеті активно використовується Flexbox для вирівнювання елементів. Наприклад, у шапці сайту
+            логотип і меню
+            навігації
+            вирівнюються за допомогою властивостей <code>display: flex</code> і
+            <code>justify-content</code>.
+        </p>
+        <pre><code>
+            .flex {
+                display: flex; /* Встановлюємо flexbox контейнер */
+                flex-wrap: wrap; /* Дозволяємо елементам переноситися на новий рядок */
+                justify-content: space-between; /* Розподіляємо елементи з відстанями між ними */
+                align-items: center; /* Вирівнюємо елементи по вертикалі по центру */
+              }
+              
+                                                                </code></pre>
+
+        <h3>3. Адаптивна верстка</h3>
+        <p>
+            Хоча макет побудований за принципом гумової верстки, його можна легко адаптувати для різних
+            розмірів екранів за
+            допомогою
+            медіазапитів. Наприклад, у наведеному коді картки автоматично змінюють свій розмір, але можна
+            додати медіазапити
+            для
+            кращої адаптації.
+        </p>
+        <pre><code>@media (max-width: 480px) {
+            .card {
+              flex: 1 1 100%; /* Картки займають всю ширину на екранах менше 480px */
+            }
+          
+            .menu {
+              flex-direction: column; /* Меню переходить в вертикальний вигляд */
+              align-items: flex-start; /* Вирівнювання меню по лівому краю */
+            }
+          }
+          
+                                                                </code></pre>
+
+        <h3>Висновок</h3>
+        <p>
+            Використання Flexbox разом із адаптивними медіа-запитами дозволяє зробити сайт гнучким і зручним для користувачів незалежно від розміру екрану. 
+            Така структура сайту адаптується до різних пристроїв, забезпечуючи зручний і ефективний інтерфейс.
+        </p>
+
+        <p>Скріншот головної сторінки</p>
+        <img src="fulll.jpg" alt="Скріншот головної сторінки сайту" class="screen-img">
+        
+        <p>Код html документу
+        <pre><code>&lt;!DOCTYPE html&gt;
+            &lt;html lang="uk"&gt;
+            &lt;head&gt;
+              &lt;meta charset="UTF-8"&gt;
+              &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+              &lt;title&gt;Гумова та адаптивна верстка&lt;/title&gt;
+              &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;!-- Header --&gt;
+              &lt;header class="header"&gt;
+                &lt;div class="container flex"&gt;
+                  &lt;nav class="menu"&gt;
+                    &lt;a href="#"&gt;Форми навчання&lt;/a&gt;
+                    &lt;a href="#"&gt;Заходи&lt;/a&gt;
+                    &lt;a href="#"&gt;Про Академію&lt;/a&gt;
+                    &lt;a href="#"&gt;Контакти&lt;/a&gt;
+                  &lt;/nav&gt;
+                  &lt;div class="city-dropdown"&gt;Київ ▼&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/header&gt;
+            
+              &lt;!-- Main Section --&gt;
+              &lt;main&gt;
+                &lt;section class="course container"&gt;
+                  &lt;h2&gt;Курс програмування&lt;/h2&gt;
+                  &lt;h1&gt;JAVA З ПРАЦЕВЛАШТУВАННЯМ:&lt;/h1&gt;
+                  &lt;div class="course-content flex"&gt;
+                    &lt;img src="жинка.jpg" alt="Жінка показує на текст"&gt;
+                    &lt;ul&gt;
+                      &lt;li&gt;&lt;strong&gt;Стажування в IT-компанії:&lt;/strong&gt; Покажи себе на курсі і ще до закінчення навчання ми відправимо тебе на стажування.&lt;/li&gt;
+                      &lt;li&gt;&lt;strong&gt;Три випускних проекти:&lt;/strong&gt; Ти будеш мати три проекти, з якими легко працевлаштуєшся.&lt;/li&gt;
+                      &lt;li&gt;&lt;strong&gt;Інтенсивність:&lt;/strong&gt; Наші студенти вчаться 6 разів на тиждень упродовж всього терміну.&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/div&gt;
+                &lt;/section&gt;
+            
+                &lt;section class="graduates container"&gt;
+                  &lt;h2&gt;Більше 800 випускників&lt;/h2&gt;
+                  &lt;h3&gt;ДОСЯГЛИ УСПІХУ У IT-СФЕРІ&lt;/h3&gt;
+                  &lt;div class="cards flex"&gt;
+                    &lt;div class="card"&gt;
+                      &lt;img src="ШВАПЦ.jpg" alt="Фото шварц" class="student-photo"&gt;
+                      &lt;h4&gt;Денис Євсєєв &lt;/h4&gt;
+                      &lt;p&gt;JAVA COMPLEX&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="card"&gt;
+                      &lt;img src="ДЕЕЕН.jpg" alt="Фото Дена" class="student-photo"&gt;
+                      &lt;h4&gt;Денис Чесніший&lt;/h4&gt;
+                      &lt;p&gt;JS COMPLEX&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="card"&gt;
+                      &lt;img src="Даша.jpg" alt="Фото Даша" class="student-photo"&gt;
+                      &lt;h4&gt;Дарія Деркач&lt;/h4&gt;
+                      &lt;p&gt;JS COMPLEX&lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/section&gt;
+              &lt;/main&gt;
+            
+              &lt;!-- Footer --&gt;
+              &lt;footer class="footer"&gt;
+                &lt;div class="container"&gt;
+                  &lt;p&gt;© 2024 Академія IT. Всі права захищені.&lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/footer&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+                </pre>
+                                 </code></pre>
+        </p>
+        <p>Код CSS
+        <pre><code>
+            /* Основний контейнер */
+            .container {
+              width: 90%; /* Гумова ширина */
+              margin: 0 auto;
+              max-width: 1200px; /* Максимальна ширина */
+            }
+            
+            /* Загальний стиль */
+            body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: #f4f4f4;
+            }
+            
+            /* Flexbox */
+            .flex {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              align-items: center;
+            }
+            
+            /* Header */
+            .header {
+              background-color: black;
+              color: white;
+              padding: 1rem 0;
+            }
+            
+            .menu a {
+              color: white;
+              text-decoration: none;
+              margin-right: 1rem;
+              font-weight: bold;
+            }
+            
+            .city-dropdown {
+              color: white;
+              font-weight: bold;
+            }
+            
+            /* Основний контент */
+            .course {
+              text-align: center;
+              padding: 2rem 0;
+              background-color: white;
+            }
+            
+            .course h1 {
+              color: orange;
+              font-size: 2rem;
+            }
+            
+            .course-content {
+              flex-wrap: wrap;
+              gap: 2rem;
+            }
+            
+            .course-content img {
+              max-width: 40%;
+              height: auto;
+              flex: 1 1 300px;
+            }
+            
+            .course-content ul {
+              flex: 1 1 300px;
+              list-style: none;
+              padding: 0;
+              text-align: left;
+            }
+            
+            /* Випускники */
+            .graduates {
+              background-color: rgb(246, 246, 246);
+              color: rgb(10, 10, 10);
+              padding: 2rem 0;
+              text-align: center;
+            }
+            
+            .cards {
+              gap: 1.5rem;
+            }
+            
+            .card {
+              background-color: white;
+              color: black;
+              border-radius: 10px;
+              padding: 1rem;
+              max-width: 250px;
+              flex: 1 1 calc(33.333% - 1rem);
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+              text-align: center;
+            }
+            
+            .student-photo {
+              width: 100%;
+              border-radius: 10px;
+            }
+            
+            /* Footer */
+            .footer {
+              background-color: black;
+              color: white;
+              text-align: center;
+              padding: 1rem 0;
+            }
+            
+            /* Адаптивність */
+            @media (max-width: 768px) {
+              .course-content {
+                flex-direction: column;
+              }
+            
+              .card {
+                flex: 1 1 calc(50% - 1rem);
+              }
+            }
+            
+            @media (max-width: 480px) {
+              .card {
+                flex: 1 1 100%;
+              }
+            
+              .menu {
+                flex-direction: column;
+                align-items: flex-start;
+              }
+            }
+                </pre>
+             
+                                </code></pre>
+        </p>
+
+    </div>
+    <div id="task2" class="lab2-section content-section text-content">
+        <p>Завдання 2.Варіант 2.Засобами HTML та CSS виконати Завдання №2, в саме: створити окремі веб-сторінки, а саме:
+            • Розмітку за допомогою таблиці (номер варіанта – остання цифра у списку групи)
+            o Фіксована таблична верстка
+            o Гумова таблична верстка
+            • Розмітку за допомогою блоків (плаваючих елементів) (номер варіанта – остання цифра у списку групи + 1)
+            o Фіксована блокова верстка
+            o Гумова блокова верстка
+        </p>
+    </div>
+    <div id="fixedTableLayout" class="lab2-section content-section text-content">
+        <h3>1.1 Фіксована таблична верстка</h3>
+        <pre>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="uk"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Фіксована таблична верстка&lt;/title&gt;
+                    &lt;style&gt;
+                        table {
+                            width: 800px; /* Фіксована ширина */
+                            margin: 0 auto;
+                            border-collapse: collapse;
+                        }
+                        th, td {
+                            border: 1px solid #ddd;
+                            padding: 10px;
+                            text-align: center;
+                        }
+                        th {
+                            background-color: #f2f2f2;
+                        }
+                    &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;Таблиця з фіксованою шириною&lt;/h1&gt;
+                    &lt;table&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;№&lt;/th&gt;
+                            &lt;th&gt;Назва&lt;/th&gt;
+                            &lt;th&gt;Ціна&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;1&lt;/td&gt;
+                            &lt;td&gt;Товар A&lt;/td&gt;
+                            &lt;td&gt;100 грн&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;2&lt;/td&gt;
+                            &lt;td&gt;Товар B&lt;/td&gt;
+                            &lt;td&gt;200 грн&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td&gt;3&lt;/td&gt;
+                            &lt;td&gt;Товар C&lt;/td&gt;
+                            &lt;td&gt;150 грн&lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/table&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+                        </pre>
+    </div>
+    <div id="fluidTableLayout" class="lab2-section content-section text-content">
+        <h3>1.2 Гумова таблична верстка</h3>
+        <pre>
+            <pre><code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="uk"&gt;
+                &lt;head&gt;
+                  &lt;meta charset="UTF-8"&gt;
+                  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                  &lt;title&gt;Гумова таблична верстка&lt;/title&gt;
+                  &lt;style&gt;
+                    table {
+                      width: 100%;
+                      max-width: 800px;
+                      margin: 0 auto;
+                      border-collapse: collapse;
+                    }
+                
+                    th, td {
+                      border: 1px solid #ccc;
+                      padding: 10px;
+                      text-align: center;
+                    }
+                
+                    th {
+                      background-color: #f4f4f4;
+                    }
+                
+                    @media (max-width: 768px) {
+                      th, td {
+                        font-size: 14px;
+                      }
+                    }
+                  &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                  &lt;table&gt;
+                    &lt;tr&gt;
+                      &lt;th&gt;Назва&lt;/th&gt;
+                      &lt;th&gt;Опис&lt;/th&gt;
+                      &lt;th&gt;Дата&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                      &lt;td&gt;Курс програмування&lt;/td&gt;
+                      &lt;td&gt;Інтенсивне навчання&lt;/td&gt;
+                      &lt;td&gt;2024-12-10&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                      &lt;td&gt;Семінар з JavaScript&lt;/td&gt;
+                      &lt;td&gt;Основи JavaScript&lt;/td&gt;
+                      &lt;td&gt;2024-12-15&lt;/td&gt;
+                    &lt;/tr&gt;
+                  &lt;/table&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+                      </code></pre>
+                    
+                        </pre>
+    </div>
+    <div id="fixedBlockLayout" class="lab2-section content-section text-content">
+        <h3>2.1 Фіксована блокова верстка</h3>
+        <pre>
+            <pre><code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="uk"&gt;
+                &lt;head&gt;
+                  &lt;meta charset="UTF-8"&gt;
+                  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                  &lt;title&gt;Фіксована блокова верстка&lt;/title&gt;
+                  &lt;style&gt;
+                    .container {
+                      width: 800px;
+                      margin: 0 auto;
+                      padding: 20px;
+                      background-color: #f4f4f4;
+                    }
+                
+                    .section {
+                      padding: 10px;
+                      margin-bottom: 20px;
+                      background-color: #fff;
+                      border: 1px solid #ccc;
+                    }
+                  &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                  &lt;div class="container"&gt;
+                    &lt;div class="section"&gt;
+                      &lt;h2&gt;Курс програмування&lt;/h2&gt;
+                      &lt;p&gt;Інтенсивне навчання з основ програмування.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="section"&gt;
+                      &lt;h2&gt;Семінар з JavaScript&lt;/h2&gt;
+                      &lt;p&gt;Основи JavaScript та використання на практиці.&lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+                      </code></pre>
+                        </pre>
+    </div>
+    <div id="fluidBlockLayout" class="lab2-section content-section text-content">
+        <h3>2.2 Гумова блокова верстка</h3>
+        <pre>
+            <pre><code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="uk"&gt;
+                &lt;head&gt;
+                  &lt;meta charset="UTF-8"&gt;
+                  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                  &lt;title&gt;Гумова блокова верстка&lt;/title&gt;
+                  &lt;style&gt;
+                    .container {
+                      width: 90%;
+                      margin: 0 auto;
+                      padding: 20px;
+                    }
+                
+                    .section {
+                      padding: 10px;
+                      margin-bottom: 20px;
+                      background-color: #fff;
+                      border: 1px solid #ccc;
+                    }
+                
+                    @media (max-width: 768px) {
+                      .container {
+                        width: 100%;
+                      }
+                
+                      .section {
+                        padding: 15px;
+                      }
+                    }
+                  &lt;/style&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                  &lt;div class="container"&gt;
+                    &lt;div class="section"&gt;
+                      &lt;h2&gt;Курс програмування&lt;/h2&gt;
+                      &lt;p&gt;Інтенсивне навчання з основ програмування.&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class="section"&gt;
+                      &lt;h2&gt;Семінар з JavaScript&lt;/h2&gt;
+                      &lt;p&gt;Основи JavaScript та використання на практиці.&lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+                      </code></pre>
+                        </pre>
+
+    </div>
+    <div id="mytask2" class="lab2-section content-section text-content">
+        <h3>Завдання 2. Варіант 5</h3>
+        <h1>Висновки</h1>
+      Висновки: Переваги та недоліки
+
+       1. Таблична верстка
+        Переваги:
+        - Легкість у розміщенні елементів по рядках і стовпцях.
+        - Підходить для структурованих даних.
+        
+        Недоліки:
+        - Обмежена гнучкість і адаптивність.
+        - Ускладнена робота з різними розмірами екранів.
+        - Застарілий підхід у веб-розробці.
+        
+         2. Блокова верстка (плаваючі блоки)
+        Переваги:
+        - Гнучкість у розміщенні елементів.
+        - Легко адаптується під різні екрани.
+        - Менше коду, краща підтримка доступності.
+        
+        Недоліки:
+        - Складніша у налаштуванні.
+        - Проблеми з сумісністю на старих браузерах.
+        - Потрібно більше налаштувань для вирівнювання елементів.
+        
+        Висновок: Блокова верстка є більш гнучкою та адаптивною, тому її краще використовувати для сучасних веб-додатків. Таблична верстка підходить лише для структурованих даних.
+            </div>
+        
+    <div id="task3Flexbox" class="lab2-section content-section text-content">
+        <p>Завдання 3. Варіант 4. Виконати Завдання №3, використовуючи засоби CSS та FLEXBOX</p>
+    </div>
+    <div id="flexboxScreenshot" class="lab2-section content-section text-content">
+        <img src="1flex.jpg" alt="Скріншот сторінки" class="screen-img">
+        <img src="2flex.jpg" alt="Скріншот сторінки" class="screen-img">
+       </div> 
+    </iv>
+    <div id="flexboxHTMLCode" class="lab2-section content-section text-content">
+        <pre><code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="uk"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;title&gt;Java з Працевлаштуванням&lt;/title&gt;
+                &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;header class="header"&gt;
+                    &lt;nav class="menu"&gt;
+                        &lt;a href="#"&gt;Форми навчання&lt;/a&gt;
+                        &lt;a href="#"&gt;Заходи&lt;/a&gt;
+                        &lt;a href="#"&gt;Про Академію&lt;/a&gt;
+                        &lt;a href="#"&gt;Контакти&lt;/a&gt;
+                        &lt;a href="#"&gt;Київ&lt;/a&gt;
+                    &lt;/nav&gt;
+                &lt;/header&gt;
+            
+                &lt;section class="hero"&gt;
+                    &lt;div class="hero-content"&gt;
+                        &lt;h1&gt;Курс програмування&lt;/h1&gt;
+                        &lt;h2&gt;Java з Працевлаштуванням&lt;/h2&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;Стажування в IT-компанії&lt;/li&gt;
+                            &lt;li&gt;Три випускних проекти&lt;/li&gt;
+                            &lt;li&gt;Інтенсивність&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                    &lt;img src="student.png" alt="Студент" class="hero-img"&gt;
+                &lt;/section&gt;
+            
+                &lt;section class="graduates"&gt;
+                    &lt;h2&gt;Більше 800 випускників досягли успіху у IT-сфері&lt;/h2&gt;
+                    &lt;div class="graduates-list"&gt;
+                        &lt;div class="graduate"&gt;
+                            &lt;img src="ана.jpg" alt="Анна"&gt;
+                            &lt;p&gt;Анна&lt;br&gt;Java Complex&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="graduate"&gt;
+                            &lt;img src="оля.jpg" alt="Оля"&gt;
+                            &lt;p&gt;Оля&lt;br&gt;JS Complex&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="graduate"&gt;
+                            &lt;img src="іван.jpg" alt="Іван"&gt;
+                            &lt;p&gt;Іван&lt;br&gt;Java Complex&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="graduate"&gt;
+                            &lt;img src="артур.jpg" alt="Артур"&gt;
+                            &lt;p&gt;Артур&lt;br&gt;JS Complex&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="graduate"&gt;
+                            &lt;img src="юра.jpg" alt="Юрій"&gt;
+                            &lt;p&gt;Юрій&lt;br&gt;JS Complex&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/section&gt;
+            
+                &lt;section class="faq"&gt;
+                    &lt;h2&gt;Чому варто нам довіряти? Часті запитання&lt;/h2&gt;
+                    &lt;div class="faq-list"&gt;
+                        &lt;div class="faq-item"&gt;
+                            &lt;h3&gt;01 Гарантії працевлаштування?&lt;/h3&gt;
+                            &lt;p&gt;...&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="faq-item"&gt;
+                            &lt;h3&gt;02 Що таке "повторка"?&lt;/h3&gt;
+                            &lt;p&gt;...&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="faq-item"&gt;
+                            &lt;h3&gt;03 Що таке "інкубатор"?&lt;/h3&gt;
+                            &lt;p&gt;...&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="faq-item"&gt;
+                            &lt;h3&gt;04 Рейтинг компанії?&lt;/h3&gt;
+                            &lt;p&gt;...&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="faq-item"&gt;
+                            &lt;h3&gt;05 Розтермінування?&lt;/h3&gt;
+                            &lt;p&gt;...&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="faq-item"&gt;
+                            &lt;h3&gt;06 Скільки триває курс?&lt;/h3&gt;
+                            &lt;p&gt;...&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/section&gt;
+            
+                &lt;footer class="footer"&gt;
+                    &lt;p&gt;Навчайся зараз, сплачуй потім&lt;/p&gt;
+                &lt;/footer&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+
+                    </code></pre>
+    </div>
+    <div id="flexboxCSSCode" class="lab2-section content-section text-content">
+        <pre><code>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                line-height: 1.6;
+            }
+            
+            .header {
+                background: #000;
+                padding: 10px;
+            }
+            
+            .header .menu {
+                display: flex;
+                justify-content: space-around;
+            }
+            
+            .header .menu a {
+                color: #fff;
+                text-decoration: none;
+            }
+            
+            .hero {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px;
+                background: #f0f0f0;
+            }
+            
+            .hero-content {
+                max-width: 50%;
+            }
+            
+            .hero-img {
+                max-width: 200px;
+            }
+            
+            .graduates {
+                background: #ddd;
+                padding: 20px;
+                text-align: center;
+            }
+            
+            .graduates-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: center;
+            }
+            
+            .graduate {
+                flex: 1 0 20%;
+                background: #fff;
+                padding: 10px;
+                border-radius: 5px;
+                text-align: center;
+            }
+            
+            .graduate img {
+                max-width: 100%;
+                border-radius: 5px;
+            }
+            
+            .faq {
+                background: #f9f9f9;
+                padding: 20px;
+            }
+            
+            .faq-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: center;
+            }
+            
+            .faq-item {
+                flex: 1 0 30%;
+                background: #fff;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            
+            .footer {
+                background: #000;
+                color: #fff;
+                text-align: center;
+                padding: 10px;
+            }
+                </code></pre>
+            
+                    </code></pre>
+    </div>
+    <div id="conclusions-2" class="lab2-section content-section text-content">
+        <h2>Висновки</h2>
+        <p>
+            Розробка цього сайту з використанням HTML та CSS демонструє ключові концепції та методи сучасної веб-розробки. Основою є використання семантичної розмітки HTML для структурування контенту та гнучкого стилювання CSS, що дозволяє створити зручний, естетично привабливий і функціональний інтерфейс.
+
+Використання Flexbox для адаптивного розташування елементів, що забезпечує правильне відображення на різних пристроях.
+Впровадження ефективного дизайну з напівпрозорими елементами, які додають візуальної глибини.
+Організація коду з дотриманням принципів DRY (Don't Repeat Yourself) для зручності підтримки й масштабування.
+Розділення стилів на загальні та специфічні для кожної секції для підвищення читабельності та повторного використання.
+Реалізація випадаючих меню для покращення навігації.
+        </p>
+
+        <h2>Контрольні питання</h2>
+        <ol>
+            <li>
+                <strong>На яких трьох базових концепціях засновані всі методики верстки сторінок засобами CSS?</strong>
+                <p>Методики верстки засновані на таких концепціях:</p>
+                <ul>
+                    <li><strong>Потік документа:</strong> природне розташування елементів на сторінці.</li>
+                    <li><strong>Блокова та стрічкова модель:</strong> визначає, як елементи займають простір на
+                        сторінці.</li>
+                    <li><strong>Відносне та абсолютне позиціонування:</strong> задає розташування відносно інших
+                        елементів або
+                        координат.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Дати визначення фіксованому типу макетів веб-сторінок. Переваги та недоліки.</strong>
+                <p><strong>Фіксований макет:</strong> ширина елементів задається в пікселях і не змінюється при зміні
+                    розміру
+                    вікна.</p>
+                <p><strong>Переваги:</strong> точний контроль над виглядом, простота у розробці.</p>
+                <p><strong>Недоліки:</strong> погана адаптивність для різних екранів, незручність для мобільних
+                    пристроїв.</p>
+            </li>
+            <li>
+                <strong>Дати визначення гумовому типу макетів веб-сторінок. Переваги та недоліки.</strong>
+                <p><strong>Гумовий макет:</strong> ширина задається у відсотках, змінюється залежно від ширини вікна.
+                </p>
+                <p><strong>Переваги:</strong> краща адаптація до різних екранів.</p>
+                <p><strong>Недоліки:</strong> можливі проблеми з читабельністю при надто великих або маленьких екранах.
+                </p>
+            </li>
+            <li>
+                <strong>Дати визначення еластичному типу макетів веб-сторінок. Переваги та недоліки.</strong>
+                <p><strong>Еластичний макет:</strong> ширина елементів визначається у відносних одиницях (наприклад,
+                    em).</p>
+                <p><strong>Переваги:</strong> гнучкість при зміні розмірів шрифтів.</p>
+                <p><strong>Недоліки:</strong> складність у налаштуванні пропорцій між елементами.</p>
+            </li>
+            <li>
+                <strong>Дати визначення адаптивному типу макетів веб-сторінок. Переваги та недоліки.</strong>
+                <p><strong>Адаптивний макет:</strong> використовує медіазапити CSS для налаштування стилів під різні
+                    розміри
+                    екранів.</p>
+                <p><strong>Переваги:</strong> зручність для будь-якого пристрою, контроль над відображенням.</p>
+                <p><strong>Недоліки:</strong> складна розробка.</p>
+            </li>
+            <li>
+                <strong>Дати визначення комбінованому типу макетів веб-сторінок. Переваги та недоліки.</strong>
+                <p><strong>Комбінований макет:</strong> поєднує фіксовані, гумові та адаптивні принципи.</p>
+                <p><strong>Переваги:</strong> універсальність, зручність.</p>
+                <p><strong>Недоліки:</strong> підвищена складність розробки.</p>
+            </li>
+            <li>
+                <strong>Як засобами HTML та CSS створити веб-сторінку за допомогою таблиці?</strong>
+                <p>Використовується тег <code>&lt;table&gt;</code> для структурування макету. Таблиці стилізуються за
+                    допомогою
+                    CSS. Проте цей підхід застарілий для верстки.</p>
+            </li>
+            <li>
+                <strong>Як засобами HTML та CSS створити веб-сторінку за допомогою плаваючих блоків?</strong>
+                <p>Використовується CSS-властивість <code>float</code> для розташування блоків. Очищення плаваючих
+                    елементів
+                    здійснюється через <code>clear: both</code>. Цей метод поступається новішим технікам, як-от Flexbox
+                    і Grid.
+                </p>
+           
+        </ol>
+    </div>
+</div>
+
 
 
 
