@@ -216,3 +216,8 @@ main {
         padding: 10px;
     }
 }
+@import url("styles.css");
+
+h1 {
+    color: rgb(241, 121, 8);
+}
