@@ -28,10 +28,7 @@
         <button onclick="showLab('lab2_2')">Лабораторна робота 2.2</button>
         <button onclick="showLab('lab3')">Лабораторна робота 3</button>
         <button onclick="showLab('lab3_2')">Лабораторна робота 3.2</button>
-        <button onclick="showLab('lab4')">Лабораторна робота 4</button>
-        <button onclick="showLab('lab4_2')">Лабораторна робота 4.2</button>
-        <button onclick="showLab('lab5')">Лабораторна робота 5</button>
-        <button onclick="showLab('lab5_2')">Лабораторна робота 5.2</button>
+     
     </nav>
 
     <main>
@@ -483,4 +480,615 @@
     });
 </script>
 </body>
+</html>
+
+ <!-- Лабораторна робота 3 -->
+ <div id="lab3" class="content-section">
+    <div class="sidebar">
+        <button onclick="showSection('goal3', 'lab3')">Тема, мета, місце розташування сайту та звіту</button>
+        <button onclick="showSection('task-1', 'lab3')">Завдання №1</button>
+        <button onclick="showSection('task-2', 'lab3')">Завдання №2</button>
+        <button onclick="showSection('task-3', 'lab3')">Завдання №3</button>
+        <button onclick="showSection('task-4', 'lab3')">Завдання №4</button>
+        <button onclick="showSection('task-5', 'lab3')">Завдання №5</button>
+        <button onclick="showSection('conclusions-3', 'lab3')">Висновки</button>
+    </div>
+    <div id="goal3" class="lab3-section content-section text-content">
+        <p><strong>Тема:</strong>ФУНКЦІОНАЛЬНЕ ЗАСТОСУВАННЯ JAVASCRIPT У HTML-ДОКУМЕНТІ.
+        ВИКОРИСТАННЯ МАСИВІВ У JS-СЦЕНАРІЯХ. РЕАЛІЗАЦІЯ ПРОГРАМ ЗАСОВАМИ МОВИ JAVASCRIPT
+
+        </p><br />
+        <p><strong>Мета:</strong>придбати практичні навички роботи з конструкціями мови JS, масивами та фугкціями у js-сценаріях. Реалізація програм
+        засовами мови JAVASCRIPT<br />
+    
+        <a href="https://senyasilpo.github.io/ipz22_301-appWEB-Evseev-Denys-MEU-2025-/">Посилання на
+            репозиторій на живу сторінку власного WEB-застосунку</a><br />
+        <a href="https://github.com/SenyaSilpo/ipz22_301-appWEB-Evseev-Denys-MEU-2025-.git">Посилання на
+            репозиторій власного WEB-застосунку</a><br />
+        <a href="https://github.com/SenyaSilpo/ipz22_301-appRECORD-DenysEvseev-MEU-2025-.git">Посилання на
+            репозиторій звітного HTML-документа</a><br />
+        <a href="https://senyasilpo.github.io/ipz22_301-appRECORD-DenysEvseev-MEU-2025-/">Посилання на
+            репозиторій на живу сторінку звітного HTML-документ</a><br />
+        <a href="https://github.com/SenyaSilpo/-ipz22_301--app-INDEPENDENT--Denys-Evseev-MEU-2025-.git">Посилання на
+            репозиторій з самостійними роботами</a><br />
+        <a href="https://senyasilpo.github.io/-ipz22_301--app-INDEPENDENT--Denys-Evseev-MEU-2025-/">Посилання на
+            репозиторій живу сторінку з самостійними роботами</a><br />
+    </div>
+    <div id="task-1" class="lab3-section content-section text-content">
+        <p>Завдання №1. Варіант 4</p>
+        <pre><code>
+            function getShippingMessage(country, price, deliveryFee) {
+                const totalPrice = price + deliveryFee; // Розраховуємо загальну вартість
+                return `Shipping to ${country} will cost ${totalPrice} credits`; // Формуємо повідомлення
+            }
+            
+            // Приклад використання
+            console.log(getShippingMessage("USA", 100, 20)); // "Shipping to USA will cost 120 credits"
+            console.log(getShippingMessage("Canada", 250, 50)); // "Shipping to Canada will cost 300 credits"
+            console.log(getShippingMessage("Germany", 300, 30)); // "Shipping to Germany will cost 330 credits"
+            
+        </code></pre>
+        <img src="1.jpg" alt="Скріншот консолі" class="screen-img">
+        
+    </div>
+    <div id="task-2" class="lab3-section content-section text-content">
+        <p>Завдання №2.Варіант 4</p>
+        <pre><code>
+            function makeTransaction(quantity, pricePerDroid, customerCredits) {
+                const totalPrice = quantity * pricePerDroid; // Розраховуємо загальну вартість замовлення
+            
+                // Перевіряємо, чи вистачає коштів у клієнта
+                if (totalPrice > customerCredits) {
+                    return "Insufficient funds!";
+                } else {
+                    return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+                }
+            }
+            
+            // Приклади використання
+            console.log(makeTransaction(5, 300, 2000)); // "You ordered 5 droids worth 1500 credits!"
+            console.log(makeTransaction(7, 400, 2500)); // "Insufficient funds!"
+            console.log(makeTransaction(3, 500, 2000)); // "You ordered 3 droids worth 1500 credits!"
+            
+            </pre>
+        </code></pre>
+        <img src="2.jpg" alt="Скріншот консолі" class="screen-img">
+    </div>
+    <div id="task-3" class="lab3-section content-section text-content">
+        <p>Завдання №3.Варіант 4</p>
+        <pre><code>
+            function makeArray(firstArray, secondArray, maxLength) {
+                // Створюємо новий масив шляхом об'єднання firstArray і secondArray
+                const combinedArray = firstArray.concat(secondArray);
+            
+                // Якщо довжина об'єднаного масиву перевищує maxLength, повертаємо його копію з обмеженням по довжині
+                if (combinedArray.length > maxLength) {
+                    return combinedArray.slice(0, maxLength);
+                }
+            
+                // Якщо довжина об'єднаного масиву в межах maxLength, повертаємо весь масив
+                return combinedArray;
+            }
+            
+            // Приклади використання
+            console.log(makeArray([1, 2], [3, 4, 5], 4)); // [1, 2, 3, 4]
+            console.log(makeArray(["a", "b"], ["c", "d", "e"], 3)); // ["a", "b", "c"]
+            console.log(makeArray([10, 20], [30, 40], 5)); // [10, 20, 30, 40]
+            
+        </code></pre>
+        <img src="3.jpg" alt="Скріншот консолі" class="screen-img">
+    </div>
+    <div id="task-4" class="lab3-section content-section text-content">
+        <p>Завдання №4(1,2).Варіант 4</p>
+        <p> 1</p>
+        <pre><code>
+            // Функція для створення масиву C
+function makeArrayC(A, B) {
+    let C = [];
+    for (let i = 0; i < A.length; i++) {
+        if (A[i] === B[i]) {
+            C.push(1);
+        } else {
+            C.push(1 / (A[i] - B[i]));
+        }
+    }
+    return C;
+}
+
+// Функція для обміну максимального елементу і першого елементу в масиві
+function swapMaxAndFirst(C) {
+    let maxIndex = C.indexOf(Math.max(...C));
+    let temp = C[0];
+    C[0] = C[maxIndex];
+    C[maxIndex] = temp;
+    return C;
+}
+
+// Ініціалізація масивів A та B
+let A = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let B = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+
+// Створення масиву C
+let C = makeArrayC(A, B);
+
+// Виведення масивів до перестановки
+console.log("Масив A:", A);
+console.log("Масив B:", B);
+console.log("Масив C до перестановки:", C);
+
+// Обмін максимального елементу з першим
+C = swapMaxAndFirst(C);
+
+// Виведення масиву C після перестановки
+console.log("Масив C після перестановки:", C);
+
+        </code></pre>
+        <img src="4.jpg" alt="Скріншот консолі" class="screen-img">
+        <p> 2</p>
+        <pre><code>
+            // Функція для сортування масиву методом бульбашки
+function bubbleSort(arr) {
+    let n = arr.length;
+    // Проходимо по всіх елементах масиву
+    for (let i = 0; i < n - 1; i++) {
+        // Проходимо через усі елементи масиву
+        for (let j = 0; j < n - 1 - i; j++) {
+            // Якщо поточний елемент більший за наступний, міняємо їх місцями
+            if (arr[j] > arr[j + 1]) {
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    return arr;
+}
+
+// Масив для сортування
+let inputArray = [7, 2, 9, 3, 5, 1, 4, 8, 6];
+
+// Виведення вхідного масиву
+console.log("Вхідний масив:", inputArray);
+
+// Викликаємо функцію сортування
+let sortedArray = bubbleSort([...inputArray]); // використовуємо spread operator для копії масиву
+
+// Виведення відсортованого масиву
+console.log("Вихідний масив (відсортований):", sortedArray);
+
+        </code></pre>
+        <img src="5.jpg" alt="Скріншот консолі" class="screen-img">
+    </div>
+    <div id="task-5" class="lab3-section content-section text-content">
+        <p> Завдання №5. Варіант 1</p>
+        <pre><code>
+            <!DOCTYPE html>
+            <html lang="uk">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Текстовий Редактор</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        padding: 20px;
+                    }
+            
+                    .editor-container {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-bottom: 20px;
+                    }
+            
+                    .editor-container textarea {
+                        width: 80%;
+                        height: 150px;
+                        margin-bottom: 20px;
+                        padding: 10px;
+                        font-size: 16px;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                    }
+            
+                    .buttons-container {
+                        margin-bottom: 20px;
+                    }
+            
+                    .buttons-container button {
+                        margin: 5px;
+                        padding: 10px 15px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        border: none;
+                        background-color: #f0f0f0;
+                        border-radius: 5px;
+                    }
+            
+                    .formatted-text {
+                        width: 80%;
+                        min-height: 150px;
+                        padding: 10px;
+                        font-size: 16px;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        background-color: #f9f9f9;
+                    }
+                </style>
+            </head>
+            <body>
+            
+                <h1>Текстовий Редактор</h1>
+            
+                <div class="editor-container">
+                    <textarea id="editor" placeholder="Введіть ваш текст тут..."></textarea>
+            
+                    <div class="buttons-container">
+                        <button onclick="toggleBold()">Напівжирний</button>
+                        <button onclick="toggleItalic()">Нахил</button>
+                        <button onclick="toggleUnderline()">Підкреслення</button>
+                        <button onclick="changeColor()">Колір тексту</button>
+                        <button onclick="toggleUppercase()">Регістри</button>
+                    </div>
+            
+                    <div>
+                        <p><strong>Попередній перегляд:</strong></p>
+                        <div id="preview" class="formatted-text"></div>
+                    </div>
+                </div>
+            
+                <script>
+                    // Отримуємо елементи
+                    const editor = document.getElementById('editor');
+                    const preview = document.getElementById('preview');
+            
+                    // Функція для оновлення попереднього перегляду
+                    function updatePreview() {
+                        preview.innerHTML = editor.value;
+                    }
+            
+                    // Функція для зміни кольору тексту
+                    function changeColor() {
+                        const color = prompt('Введіть колір (назва або HEX):');
+                        if (color) {
+                            preview.style.color = color;
+                        }
+                    }
+            
+                    // Функція для перемикання напівжирного стилю
+                    function toggleBold() {
+                        document.execCommand('bold');
+                        updatePreview();
+                    }
+            
+                    // Функція для перемикання нахилу
+                    function toggleItalic() {
+                        document.execCommand('italic');
+                        updatePreview();
+                    }
+            
+                    // Функція для перемикання підкреслення
+                    function toggleUnderline() {
+                        document.execCommand('underline');
+                        updatePreview();
+                    }
+            
+                    // Функція для перемикання регістра
+                    function toggleUppercase() {
+                        let text = editor.value;
+                        if (text === text.toUpperCase()) {
+                            editor.value = text.toLowerCase();
+                        } else {
+                            editor.value = text.toUpperCase();
+                        }
+                        updatePreview();
+                    }
+            
+                    // Слухач події для оновлення попереднього перегляду
+                    editor.addEventListener('input', updatePreview);
+                </script>
+            </body>
+            </html>
+            
+        </code></pre>
+       
+        
+    </div>
+    <div id="conclusions-3" class="lab3-section content-section text-content">
+        <h2>Висновки</h2>
+        <p>Висновок:
+            Отримані знання дозволяють ефективно використовувати можливості JavaScript для створення інтерактивних веб-додатків, маніпуляції даними та взаємодії з користувачем. Застосування масивів і функцій у реальних проектах значно підвищує продуктивність і гнучкість коду.
+        </p>
+
+    </div>
+</div>
+
+
+
+<!-- Лабораторна робота 3_2 -->
+<div id="lab3_2" class="content-section">
+    <div class="sidebar">
+        <button onclick="showSection('goal3_2', 'lab3_2')">Тема, мета, місце розташування сайту та звіту</button>
+        <button onclick="showSection('tasks-3_2', 'lab3_2')">Завдання №2,4,6,8,10</button>
+        <button onclick="showSection('conclusions-3_2', 'lab3_2')">Висновки</button>
+    </div>
+    <div id="goal3_2" class="lab3_2-section content-section text-content">
+        <p><strong>Тема:</strong>ОБ'ЄКТ. МЕТОДИ ОБ'ЄКТА. МАСИВ ОБ'ЄКТІВ. ДЕСТРУКТУРИЗАЦІЯ ОБ'ЄКТІВ. CALLBACK. СТРІЛОЧНІ ФУНКЦІЇ. СТРІЛОЧНІ ФУНКЦІЇ ЯК
+        КОЛБЕКИ.
+        </p><br />
+        <p><strong>Мета:</strong>придбати практичні навички роботи з об'єктами. Методи об'єкта.. Callback. Стрілочні функції. Стрілочні функції як
+        колбеки.Реалізація програм засовами мови JAVASCRIPT
+        <br />
+
+        <a href="https://senyasilpo.github.io/ipz22_301-appWEB-Evseev-Denys-MEU-2025-/">Посилання на
+            репозиторій на живу сторінку власного WEB-застосунку</a><br />
+        <a href="https://github.com/SenyaSilpo/ipz22_301-appWEB-Evseev-Denys-MEU-2025-.git">Посилання на
+            репозиторій власного WEB-застосунку</a><br />
+        <a href="https://github.com/SenyaSilpo/ipz22_301-appRECORD-DenysEvseev-MEU-2025-.git">Посилання на
+            репозиторій звітного HTML-документа</a><br />
+        <a href="https://senyasilpo.github.io/ipz22_301-appRECORD-DenysEvseev-MEU-2025-/">Посилання на
+            репозиторій на живу сторінку звітного HTML-документ</a><br />
+        <a href="https://github.com/SenyaSilpo/-ipz22_301--app-INDEPENDENT--Denys-Evseev-MEU-2025-.git">Посилання на
+            репозиторій з самостійними роботами</a><br />
+        <a href="https://senyasilpo.github.io/-ipz22_301--app-INDEPENDENT--Denys-Evseev-MEU-2025-/">Посилання на
+            репозиторій живу сторінку з самостійними роботами</a><br />
+    </div>
+    <div id="tasks-3_2" class="lab3_2-section content-section text-content">
+        <h2>Завдання 2</h2>
+        <pre>
+            //функція ідентифікатора товара
+            function getProductDetails(productId, successCallback, errorCallback) {
+                // Імітація бази даних продуктів
+                const productsDatabase = {
+                    1: { id: 1, name: "Laptop", price: 1500 },
+                    2: { id: 2, name: "Smartphone", price: 800 },
+                    3: { id: 3, name: "Tablet", price: 500 },
+                };
+            
+                // Імітація затримки для асинхронності
+                setTimeout(() => {
+                    const product = productsDatabase[productId];
+                    if (product) {
+                        successCallback(product); // Виклик успішного колбеку з деталями продукту
+                    } else {
+                        errorCallback(`Product with ID ${productId} not found.`); // Виклик колбеку з помилкою
+                    }
+                }, 1000); // 1 секунда затримки
+            }
+            
+            // Приклад використання
+            getProductDetails(
+                1,
+                (product) => {
+                    console.log("Product details:", product);
+                },
+                (error) => {
+                    console.error("Error:", error);
+                }
+            );
+            
+        </pre>
+        
+        <h2>Завдання 4</h2>
+        <pre>
+            const concerts = {
+                Київ: new Date("2020-04-01"),
+                Умань: new Date("2025-07-02"),
+                Вінниця: new Date("2020-04-21"),
+                Одеса: new Date("2025-03-15"),
+                Хмельницький: new Date("2020-04-18"),
+                Харків: new Date("2025-07-10"),
+            };
+            
+            // Поточна дата
+            const currentDate = new Date();
+            
+            // Отримати масив міст з майбутніми концертами, відсортованими за датою
+            const result = Object.entries(concerts)
+                .filter(([city, date]) => date > currentDate) // Фільтруємо концерти, що ще не відбулися
+                .sort((a, b) => a[1] - b[1]) // Сортуємо за датами
+                .map(([city]) => city); // Отримуємо лише імена міст
+            
+            console.log(result); // Очікуваний результат: ["Одеса", "Умань", "Харків"]
+            
+        </pre>
+        
+        <h2>Завдання 6</h2>
+        <pre>
+            const medicines = [
+            { name: "Noshpa", price: 170 },
+            { name: "Analgin", price: 55 },
+            { name: "Quanil", price: 310 },
+            { name: "Alphacholine", price: 390 },
+        ];
+        
+        const applyDiscountAndAddId = (medicines) => {
+            return medicines.map((medicine, index) => {
+                const discountedPrice =
+                    medicine.price > 300 ? medicine.price * 0.7 : medicine.price;
+                return {
+                    id: index + 1, // Генеруємо унікальний ID
+                    name: medicine.name,
+                    price: +discountedPrice.toFixed(2), // Округлюємо до двох знаків після коми
+                };
+            });
+        };
+        
+        const updatedMedicines = applyDiscountAndAddId(medicines);
+        
+        console.log(updatedMedicines);
+
+        //результат
+        [
+    { id: 1, name: "Noshpa", price: 170 },
+    { id: 2, name: "Analgin", price: 55 },
+    { id: 3, name: "Quanil", price: 217 },
+    { id: 4, name: "Alphacholine", price: 273 }
+]
+
+        </pre>
+        
+        <h2>Завдання 8</h2>
+        <pre>
+        function Storage(initialItems) {
+    this.items = initialItems;
+
+    // Метод для отримання всіх товарів
+    this.getItems = function () {
+        return this.items;
+    };
+
+    // Метод для додавання нового товару
+    this.addItem = function (item) {
+        this.items.push(item);
+    };
+
+    // Метод для видалення товару
+    this.removeItem = function (item) {
+        const itemIndex = this.items.indexOf(item);
+        if (itemIndex !== -1) {
+            this.items.splice(itemIndex, 1); // Видаляє товар з масиву
+        }
+    };
+}
+
+// Приклад використання
+const arr = ["apple", "banana", "mango"];
+const storage = new Storage(arr);
+
+console.log(storage.getItems()); // ["apple", "banana", "mango"]
+
+storage.addItem("orange");
+console.log(storage.getItems()); // ["apple", "banana", "mango", "orange"]
+
+storage.removeItem("banana");
+console.log(storage.getItems()); // ["apple", "mango", "orange"]
+
+        </pre>
+        
+        <h2>Завдання 10</h2>
+        <pre>
+            function checkBrackets(str) {
+                const stack = [];
+                const brackets = {
+                    ')': '(',
+                    '}': '{',
+                    ']': '[',
+                };
+            
+                for (const char of str) {
+                    // Якщо символ - відкрита дужка, додаємо в стек
+                    if (['(', '{', '['].includes(char)) {
+                        stack.push(char);
+                    }
+                    // Якщо символ - закрита дужка
+                    else if ([')', '}', ']'].includes(char)) {
+                        // Перевіряємо, чи стек не порожній і верхній елемент у ньому відповідає закритій дужці
+                        if (stack.pop() !== brackets[char]) {
+                            return false;
+                        }
+                    }
+                }
+            
+                // Якщо стек порожній, дужки збалансовані
+                return stack.length === 0;
+            }
+            
+            // Приклади використання
+            console.log(checkBrackets("function someFn() { return [1, 2, 3]; }")); // true
+            console.log(checkBrackets("function someFn() { return [1, 2, 3; }"));  // false
+            console.log(checkBrackets("(a + b) * {c / [d - e]}"));                 // true
+            console.log(checkBrackets("(a + b) * {c / [d - e]}]"));                // false
+            
+        </pre>
+        
+        
+    </div>
+    <div id="conclusions-3_2" class="lab3_2-section content-section text-content">
+        <h2>Висновки до лабораторної роботи</h2>
+        <pre>Висновок:
+
+         Тема:  
+            Ознайомлення з основними аспектами роботи з об'єктами, методами об'єктів, масивами об'єктів,
+             деструктуризацією, а також використання стрілочних функцій та callback-функцій у JavaScript.
+            
+             Мета досягнута:
+            1. Об'єкти та методи об'єкта:
+               - Навчилися створювати об'єкти, додавати до них властивості та методи.
+               - Використовували методи для роботи з властивостями об'єкта (наприклад, отримання та модифікація даних).
+            
+            2. Масиви об'єктів:
+               - Дослідили, як працювати з масивами, що містять об'єкти (наприклад, фільтрація, сортування, трансформація).
+               - Ознайомилися з методами роботи з масивами (`map`, `filter`, `reduce`) для обробки масивів об'єктів.
+            
+            3. Деструктуризація об'єктів:
+               - Використовували деструктуризацію для зручного доступу до властивостей об'єкта.
+               - Застосовували деструктуризацію в параметрах функцій для отримання конкретних значень.
+            
+            4. Callback-функції:
+               - Навчилися використовувати callback-функції для передачі логіки у функції вищого порядку.
+               - Застосували callback-функції для роботи з асинхронними задачами.
+            
+            5. Стрілочні функції:
+               - Зрозуміли переваги стрілочних функцій: компактний синтаксис, відсутність власного `this`.
+               - Використовували стрілочні функції як callback'и у методах обробки масивів (`map`, `filter` тощо).
+            
+            6. Практика:
+               - Написано декілька програм, що демонструють використання об'єктів, масивів об'єктів, методів роботи з масивами, стрілочних функцій, та callback-функцій.
+               - Реалізовано завдання для перевірки правильності роботи алгоритмів та розуміння матеріалу.
+            
+            
+            Результати:
+            Вивчення теми дало змогу закріпити ключові навички роботи з базовими інструментами JavaScript. Практичний досвід дозволяє ефективно використовувати об'єкти,
+             обробляти масиви об'єктів, будувати компактні функції за допомогою стрілочного синтаксису, та інтегрувати callback-функції у логіку програм.
+            
+            
+            
+            </pre>
+    </div>
+</div>
+
+</div>
+</main>
+
+<script>
+// Функція для відображення вибраної лабораторної роботи
+function showLab(labId) {
+const labs = document.querySelectorAll('.content-section');
+labs.forEach(lab => lab.classList.remove('active'));
+document.getElementById(labId).classList.add('active');
+}
+
+// Функція для відображення вибраного розділу у вибраній лабораторній роботі
+function showSection(sectionId, labId) {
+const activeLab = document.getElementById(labId);
+if (activeLab) {
+    const sections = activeLab.querySelectorAll(`.${labId}-section`);
+    sections.forEach(section => section.style.display = 'none');
+    activeLab.querySelector(`#${sectionId}`).style.display = 'block';
+}
+}
+
+// Ініціалізація: показ першої лабораторної роботи і першого розділу
+document.addEventListener("DOMContentLoaded", () => {
+showLab('lab1');
+showSection('description', 'lab1');
+});
+
+document.querySelectorAll('.sidebar button').forEach(button => {
+button.addEventListener('click', () => {
+    document.querySelectorAll('.sidebar button').forEach(btn => btn.classList.remove('active-button'));
+    button.classList.add('active-button');
+});
+});
+
+document.querySelectorAll('nav button').forEach(button => {
+button.addEventListener('click', () => {
+    document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active-button'));
+    button.classList.add('active-button');
+});
+});
+</script>
+</body>
+
 </html>
